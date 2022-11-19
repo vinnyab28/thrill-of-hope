@@ -1,0 +1,15 @@
+{
+	"scripts": {
+		"watch-sass": "node-sass --watch ./src/index.scss -o ./dist",
+		"build-sass": "node-sass ./src/index.scss -o ./dist --output-style compressed",
+		"build-js": "webpack --config ./webpack.config.js --mode=development"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.20.2",
+		"@babel/preset-env": "^7.20.2",
+		"babel-loader": "^9.1.0",
+		"node-sass": "^8.0.0",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.0"
+	}
+}
