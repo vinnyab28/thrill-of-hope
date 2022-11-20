@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Thrill of Hope</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./assets/css/index.css" />
+	</head>
+	<body>
+		<div class="splash-screen">
+			<img src="./assets/images/splash_screen.gif" alt="Thrill of Hope" />
+			<button class="btn enter-btn">ENTER!</button>
+		</div>
+		<div id="snow-container"></div>
+		<header class="navbar navbar-expand-lg navbar-transparent main-navbar mb-5 mb-md-0">
+			<button
+				class="navbar-toggler text-light"
+				type="button"
+				data-toggle="collapse"
+				data-target="#menuNav"
+				aria-controls="menuNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+			</button>
+
+			<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
+				<img src="https://wccbangalore.org/storage/app/media/core-img/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
+			</a>
+			<ul class="navbar-nav ml-md-auto flex-row second-list d-xs-flex d-md-none">
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"><i class="fa fa-snowflake-o"></i></button>
+				</li>
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"><i class="fa fa-music"></i></button>
+				</li>
+			</ul>
+			<div class="collapse navbar-collapse flex-grow-1 overflow-auto" id="menuNav">
+				<div class="navbar-nav-scroll">
+					<ul class="navbar-nav flex-row first-list">
+						<li class="nav-item font-weight-lighter">
+							<a class="nav-link text-light" href="https://wccbangalore.org/">Home</a>
+						</li>
+						<li class="nav-item font-weight-lighter">
+							<a class="nav-link text-light" href="https://wccbangalore.org/events">Events</a>
+						</li>
+						<li class="nav-item font-weight-lighter">
+							<a class="nav-link text-light" href="https://wccbangalore.org/gallery">Gallery</a>
+						</li>
+						<li class="nav-item font-weight-bold active border-bottom border-white">
+							<a class="nav-link text-light fw-bold" href="#">Hope</a>
+						</li>
+						<li class="nav-item rounded hope-registration-form-btn">
+							<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registraion Form</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="navbar-nav ml-md-auto flex-row second-list d-none d-md-flex">
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"><i class="fa fa-snowflake-o"></i></button>
+				</li>
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"><i class="fa fa-music"></i></button>
+				</li>
+			</ul>
+		</header>
+		<div class="container-fluid">
+			<div class="registration-container">
+				<div class="row">
+					<div class="col">
+						<p class="registration-heading">Register &amp; join us<br />this christmas</p>
+					</div>
+				</div>
+				<div class="row align-items-center">
+					<div class="col-lg-4 offset-lg-4 text-center">
+						<a href="#" class="registration-link"><button class="btn registration-btn">Count me in</button></a>
+						<p class="registration-subheading">Click the button to Register!</p>
+					</div>
+					<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
+						<ul class="list-unstyled ml-sm-5">
+							<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
+							<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
+							<li><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="ground-container">
+				<img src="./assets/images/ground.png" alt="Ground" srcset="" class="ground" />
+				<img src="./assets/images/santa.png" alt="Santa" srcset="" class="santa" />
+			</div>
+		</div>
+		<audio id="backgroundMusic" loop="true">
+			<source src="./assets/audio/background_music.mp3" type="audio/mpeg" />
+		</audio>
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://js.churchcenter.com/modal/v1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@erikwatson/snowfall/dist/snowfall.min.js"></script>
+		<!-- Change the js back to ./src/index.js during development -->
+		<!-- <script src="./src/index.js"></script> -->
+		<!-- For production -->
+		<script src="./assets/js/thrill-of-hope.min.js"></script>
+	</body>
+</html>
