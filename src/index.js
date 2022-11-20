@@ -1,12 +1,12 @@
 $(document).ready(() => {
 	//Can run the snowfall by calling:
-	setTimeout(() => {
+	$(document).on("click", ".enter-btn", function () {
 		$(".splash-screen").addClass("hidden");
 		snowfall.start({
 			bg: "transparent",
 			primary: "#8d90b7",
 			secondary: "#ffffff",
-			density: 106,
+			density: 100,
 			wave: {
 				frequency: 0.1,
 				amplitude: 1.61,
@@ -20,14 +20,21 @@ $(document).ready(() => {
 				strength: 0.5,
 			},
 		});
-	}, 1500);
+		$("#backgroundMusic")[0].play();
+	});
 
 	$(".registration-link").click(() => {
 		var pc_visitor_form = "https://wccbangalore.churchcenter.com/people/forms/467901";
 		ChurchCenterModal.open(pc_visitor_form);
 	});
 
-	$(".background-music-btn").click(() => {
+	$(document).on("click", ".background-music-btn", function () {
 		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
+		$(this).toggleClass("no");
+	});
+
+	$(document).on("click", ".background-snow-btn", function () {
+		$(this).hasClass("no") ? snowfall.setDensity(100) : snowfall.setDensity(0);
+		$(this).toggleClass("no");
 	});
 });

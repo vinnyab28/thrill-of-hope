@@ -23,36 +23,58 @@
 	<body>
 		<div class="splash-screen">
 			<img src="../assets/images/splash_screen.gif" alt="Thrill of Hope" />
+			<button class="btn enter-btn">ENTER!</button>
 		</div>
 		<div id="snow-container"></div>
-		<header class="navbar navbar-expand navbar-transparent flex-column flex-md-row main-navbar">
+		<header class="navbar navbar-expand-lg navbar-transparent main-navbar mb-5 mb-md-0">
+			<button
+				class="navbar-toggler text-light"
+				type="button"
+				data-toggle="collapse"
+				data-target="#menuNav"
+				aria-controls="menuNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+			</button>
+
 			<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
 				<img src="https://wccbangalore.org/storage/app/media/core-img/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
 			</a>
-
-			<div class="navbar-nav-scroll">
-				<ul class="navbar-nav flex-row first-list">
-					<li class="nav-item font-weight-lighter">
-						<a class="nav-link text-light" href="#">Home</a>
-					</li>
-					<li class="nav-item font-weight-lighter">
-						<a class="nav-link text-light" href="#">About Us</a>
-					</li>
-					<li class="nav-item font-weight-bold active border-bottom border-white">
-						<a class="nav-link text-light fw-bold" href="#">Hope</a>
-					</li>
-					<li class="nav-item rounded hope-registration-form-btn">
-						<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registraion Form</a>
-					</li>
-				</ul>
-			</div>
-
-			<ul class="navbar-nav ml-md-auto second-list">
+			<ul class="navbar-nav ml-md-auto flex-row second-list d-xs-flex d-md-none">
 				<li class="nav-item">
-					<button class="btn nav-link mr-md-2 text-light"><i class="fa fa-snowflake-o"></i></button>
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"><i class="fa fa-snowflake-o"></i></button>
 				</li>
 				<li class="nav-item">
-					<button class="btn nav-link mr-md-2 text-light background-music-btn"><i class="fa fa-music"></i></button>
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"><i class="fa fa-music"></i></button>
+				</li>
+			</ul>
+			<div class="collapse navbar-collapse flex-grow-1 overflow-auto" id="menuNav">
+				<div class="navbar-nav-scroll">
+					<ul class="navbar-nav flex-row first-list">
+						<li class="nav-item font-weight-lighter">
+							<a class="nav-link text-light" href="#">Home</a>
+						</li>
+						<li class="nav-item font-weight-lighter">
+							<a class="nav-link text-light" href="#">About Us</a>
+						</li>
+						<li class="nav-item font-weight-bold active border-bottom border-white">
+							<a class="nav-link text-light fw-bold" href="#">Hope</a>
+						</li>
+						<li class="nav-item rounded hope-registration-form-btn">
+							<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registraion Form</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="navbar-nav ml-md-auto flex-row second-list d-none d-md-flex">
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"><i class="fa fa-snowflake-o"></i></button>
+				</li>
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"><i class="fa fa-music"></i></button>
 				</li>
 			</ul>
 		</header>
@@ -60,17 +82,16 @@
 			<div class="registration-container">
 				<div class="row">
 					<div class="col">
-						<p class="registration-heading">Register & join us<br />this christmas</p>
+						<p class="registration-heading">Register &amp; join us<br />this christmas</p>
 					</div>
 				</div>
 				<div class="row align-items-center">
-					<div class="col"></div>
-					<div class="col text-center">
+					<div class="col-lg-4 offset-lg-4 text-center">
 						<button class="btn registration-btn text-light">Count me in</button>
 						<p class="registration-subheading registration-link">Click the button to Register!</p>
 					</div>
-					<div class="col text-left schedule-col">
-						<ul class="list-unstyled ml-5">
+					<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
+						<ul class="list-unstyled ml-sm-5">
 							<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
 							<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
 							<li><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</li>
@@ -84,7 +105,7 @@
 				<img src="../assets/images/santa.png" alt="Santa" srcset="" class="santa" />
 			</div>
 		</div>
-		<audio id="backgroundMusic" autoplay="true" loop="true">
+		<audio id="backgroundMusic">
 			<source src="../assets/audio/background_music.mp3" type="audio/mpeg" />
 		</audio>
 		<script

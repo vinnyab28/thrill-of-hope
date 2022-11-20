@@ -22,12 +22,17 @@
 	font-weight: bold;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	font-family: "Baskerville", Georgia, serif;
 	background: url("../assets/images/texture.svg"), #2a2a51;
 	margin: 0;
 	color: #ffffff;
 	font-size: 14px;
+	min-height: 100%;
 }
 
 .splash-screen {
@@ -37,6 +42,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	background: #ffffff;
 	z-index: 999;
 	width: 100%;
@@ -46,11 +52,22 @@ body {
 
 	&.hidden {
 		top: -100vh;
+		animation: open-splash-screen 1.5s ease-in-out 0s 1;
 	}
 
 	img {
 		max-width: 30%;
 		max-height: 100%;
+	}
+
+	button.enter-btn {
+		font-family: "CHRISTMAS DAY";
+		border-radius: 20px;
+		font-size: 2rem;
+		background: #ed5451;
+		color: #ffffff;
+		padding: 5px 30px;
+		margin-top: 20px;
 	}
 }
 
@@ -59,6 +76,23 @@ body {
 	max-width: 100vw;
 	height: 100vh;
 	position: fixed;
+}
+
+.main-navbar {
+	.nav-logo {
+		width: 100%;
+		min-width: 120px;
+		max-width: 150px;
+	}
+	.first-list li {
+		margin: auto 15px;
+		white-space: nowrap;
+	}
+	.hope-registration-form-btn {
+		background: #ed5451;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 .registration-container {
@@ -113,22 +147,6 @@ body {
 	}
 }
 
-.main-navbar {
-	.nav-logo {
-		width: 100%;
-		min-width: 120px;
-		max-width: 150px;
-	}
-	.first-list li {
-		margin: auto 15px;
-	}
-	.hope-registration-form-btn {
-		background: #ed5451;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-}
-
 .ground-container {
 	position: absolute;
 	bottom: 0;
@@ -148,5 +166,77 @@ body {
 		bottom: 0;
 		left: 7%;
 		width: 30%;
+	}
+}
+
+@media (max-width: 576px) {
+	.splash-screen {
+		img {
+			max-width: 75%;
+		}
+	}
+
+	.main-navbar {
+		.first-list {
+			margin-bottom: 15px;
+		}
+		.second-list li {
+			button {
+				width: 42px;
+				height: 42px;
+				position: relative;
+			}
+		}
+	}
+
+	.registration-container {
+		.registration-heading {
+			font-size: 2.75rem;
+			line-height: 60px;
+		}
+
+		.registration-subheading {
+			font-size: 0.75rem;
+		}
+
+		button.btn.registration-btn {
+			font-size: 2.5rem;
+			padding: 10px 30px 0;
+
+			&::before {
+				top: -37px;
+			}
+		}
+		.schedule-col {
+			margin: 30px auto;
+			font-size: 0.7rem;
+
+			ul li {
+				text-align: center;
+			}
+		}
+	}
+
+	.ground-container {
+		.santa {
+			width: 50%;
+		}
+	}
+}
+
+@keyframes open-splash-screen {
+	0% {
+		top: 0vh;
+	}
+	20% {
+		top: -20vh;
+	}
+
+	40% {
+		top: -10vh;
+	}
+
+	100% {
+		top: -100vh;
 	}
 }
