@@ -42,7 +42,8 @@ body {
     padding: 20px 40px 0px;
     border-radius: 0 0 20px 20px;
     position: relative;
-    margin-top: 30px; }
+    margin-top: 30px;
+    white-space: nowrap; }
     .registration-container button.btn.registration-btn::before {
       content: "";
       background: url("../assets/images/button-snow.png") center no-repeat;
