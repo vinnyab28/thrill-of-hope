@@ -18,11 +18,11 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="../dist/index.css" />
+		<link rel="stylesheet" href="./assets/css/index.css" />
 	</head>
 	<body>
 		<div class="splash-screen">
-			<img src="../assets/images/splash_screen.gif" alt="Thrill of Hope" />
+			<img src="./assets/images/splash_screen.gif" alt="Thrill of Hope" />
 			<button class="btn enter-btn">ENTER!</button>
 		</div>
 		<div id="snow-container"></div>
@@ -54,10 +54,13 @@
 				<div class="navbar-nav-scroll">
 					<ul class="navbar-nav flex-row first-list">
 						<li class="nav-item font-weight-lighter">
-							<a class="nav-link text-light" href="#">Home</a>
+							<a class="nav-link text-light" href="https://wccbangalore.org/">Home</a>
 						</li>
 						<li class="nav-item font-weight-lighter">
-							<a class="nav-link text-light" href="#">About Us</a>
+							<a class="nav-link text-light" href="https://wccbangalore.org/events">Events</a>
+						</li>
+						<li class="nav-item font-weight-lighter">
+							<a class="nav-link text-light" href="https://wccbangalore.org/gallery">Gallery</a>
 						</li>
 						<li class="nav-item font-weight-bold active border-bottom border-white">
 							<a class="nav-link text-light fw-bold" href="#">Hope</a>
@@ -87,8 +90,8 @@
 				</div>
 				<div class="row align-items-center">
 					<div class="col-lg-4 offset-lg-4 text-center">
-						<button class="btn registration-btn text-light">Count me in</button>
-						<p class="registration-subheading registration-link">Click the button to Register!</p>
+						<a href="#" class="registration-link"><button class="btn registration-btn">Count me in</button></a>
+						<p class="registration-subheading">Click the button to Register!</p>
 					</div>
 					<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
 						<ul class="list-unstyled ml-sm-5">
@@ -101,12 +104,12 @@
 			</div>
 
 			<div class="ground-container">
-				<img src="../assets/images/ground.png" alt="Ground" srcset="" class="ground" />
-				<img src="../assets/images/santa.png" alt="Santa" srcset="" class="santa" />
+				<img src="./assets/images/ground.png" alt="Ground" srcset="" class="ground" />
+				<img src="./assets/images/santa.png" alt="Santa" srcset="" class="santa" />
 			</div>
 		</div>
 		<audio id="backgroundMusic">
-			<source src="../assets/audio/background_music.mp3" type="audio/mpeg" />
+			<source src="./assets/audio/background_music.mp3" type="audio/mpeg" />
 		</audio>
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -120,6 +123,7 @@
 		></script>
 		<script src="https://js.churchcenter.com/modal/v1"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@erikwatson/snowfall/dist/snowfall.min.js"></script>
-		<script src="./index.js"></script>
+		<!-- Change the js back to ./src/index.js during development -->
+		<script src="./assets/js/thrill-of-hope.min.js"></script>
 	</body>
 </html>

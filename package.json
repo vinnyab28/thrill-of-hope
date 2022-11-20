@@ -1,9 +1,9 @@
 {
 	"scripts": {
-		"watch-scss": "node-sass --watch ./src/index.scss -o ./dist",
-		"build-scss": "node-sass ./src/index.scss -o ./dist --output-style compressed",
+		"watch-scss": "node-sass --watch ./src/index.scss -o ./assets/css",
+		"build-scss": "node-sass ./src/index.scss -o ./assets/css --output-style compressed",
 		"build-js": "webpack --config ./webpack.config.js --mode=development",
-		"build-production": "node-sass ./src/index.scss -o ./dist --output-style compressed && webpack --config ./webpack.config.js --mode=development"
+		"build-production": "node-sass ./src/index.scss -o ./assets/css --output-style compressed && webpack --config ./webpack.config.js --mode=development"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.2",

@@ -1,24 +1,24 @@
 @font-face {
 	font-family: "CHRISTMAS DAY";
-	src: url("../assets/fonts/CHRISTMAS\ DAY.otf");
+	src: url("../fonts/CHRISTMAS\ DAY.otf");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Baskerville";
-	src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
+	src: url("../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Baskerville";
-	src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("truetype");
+	src: url("../fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("truetype");
 	font-style: italic;
 }
 
 @font-face {
 	font-family: "Baskerville";
-	src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
+	src: url("../fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
 	font-weight: bold;
 }
 
@@ -28,7 +28,7 @@ html {
 
 body {
 	font-family: "Baskerville", Georgia, serif;
-	background: url("../assets/images/texture.svg"), #2a2a51;
+	background: url("../images/texture.svg"), #2a2a51;
 	margin: 0;
 	color: #ffffff;
 	font-size: 14px;
@@ -52,7 +52,7 @@ body {
 
 	&.hidden {
 		top: -100vh;
-		animation: open-splash-screen 1.5s ease-in-out 0s 1;
+		animation: open-splash-screen 3s ease-in-out 0s 1;
 	}
 
 	img {
@@ -64,10 +64,11 @@ body {
 		font-family: "CHRISTMAS DAY";
 		border-radius: 20px;
 		font-size: 2rem;
-		background: #ed5451;
-		color: #ffffff;
+		// background: #ed5451;
+		// color: #ffffff;
 		padding: 5px 30px;
 		margin-top: 20px;
+		animation: blink 1s steps(1) infinite;
 	}
 }
 
@@ -118,10 +119,11 @@ body {
 		position: relative;
 		margin-top: 30px;
 		white-space: nowrap;
+		animation: blink 1s steps(1) infinite;
 
 		&::before {
 			content: "";
-			background: url("../assets/images/button-snow.png") center no-repeat;
+			background: url("../images/button-snow.png") center no-repeat;
 			background-size: contain;
 			position: absolute;
 			top: -45px;
@@ -228,15 +230,38 @@ body {
 	0% {
 		top: 0vh;
 	}
-	20% {
+	10% {
 		top: -20vh;
 	}
 
+	20% {
+		top: -15vh;
+	}
+
+	30% {
+		top: -30vh;
+	}
+
 	40% {
+		top: -20vh;
+	}
+
+	50% {
 		top: -10vh;
 	}
 
 	100% {
 		top: -100vh;
+	}
+}
+
+@keyframes blink {
+	0% {
+		background-color: #8d261d;
+		color: #ffffff;
+	}
+	50% {
+		background-color: #ed5451;
+		color: #000000;
 	}
 }

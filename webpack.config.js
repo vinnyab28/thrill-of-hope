@@ -6,8 +6,8 @@ module.exports = {
 	entry: ["./src/index.js"],
 	watch: isDevelopment,
 	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: isDevelopment ? "thrill-of-hope.js" : "thirll-of-hope.min.js",
+		path: path.resolve(__dirname, "assets/js"),
+		filename: isDevelopment ? "thrill-of-hope.js" : "thrill-of-hope.min.js",
 	},
 	module: {
 		rules: [
