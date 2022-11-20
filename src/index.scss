@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'CHRISTMAS DAY';
+    src: url('../assets/fonts/CHRISTMAS\ DAY.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('../assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('../assets/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('../assets/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
 body {
+    font-family: 'Baskerville', Georgia, serif;
     margin: 0;
 }
