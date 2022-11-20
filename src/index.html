@@ -11,10 +11,105 @@
 			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="../dist/index.css" />
 	</head>
 	<body>
-		<p>Hello, world!</p>
+		<!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+			<a class="navbar-brand" href="#">
+				<img src="https://wccbangalore.org/storage/app/media/core-img/wcc-logo-black-small.png" alt="WCC Bangalore" srcset="" />
+			</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="#">About Us <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link text-light fw-bold" href="#">Hope <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav> -->
+		<header class="navbar navbar-expand navbar-transparent flex-column flex-md-row main-navbar">
+			<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
+				<img src="https://wccbangalore.org/storage/app/media/core-img/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
+			</a>
+
+			<div class="navbar-nav-scroll">
+				<ul class="navbar-nav flex-row first-list">
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="#">Home</a>
+					</li>
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="#">About Us</a>
+					</li>
+					<li class="nav-item font-weight-bold active border-bottom border-white">
+						<a class="nav-link text-light fw-bold" href="#">Hope</a>
+					</li>
+					<li class="nav-item rounded hope-registration-form-btn">
+						<a class="nav-link text-light fw-bold" href="#">Hope Registraion Form</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="navbar-nav ml-md-auto second-list">
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light"><i class="fa fa-snowflake-o"></i></button>
+				</li>
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light"><i class="fa fa-music"></i></button>
+				</li>
+			</ul>
+		</header>
+		<div class="container-fluid">
+			<div class="registration-container">
+				<div class="row">
+					<div class="col">
+						<p class="registration-heading">Register & join us<br />this christmas</p>
+					</div>
+				</div>
+				<div class="row align-items-center">
+					<div class="col"></div>
+					<div class="col text-center">
+						<button class="btn registration-btn text-light">Count me in</button>
+						<p class="registration-subheading">Click the button to Register!</p>
+					</div>
+					<div class="col text-left schedule-col">
+						<ul class="list-unstyled ml-5">
+							<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
+							<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
+							<li><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="ground-container">
+				<img src="../assets/images/ground.png" alt="Ground" srcset="" class="ground" />
+				<img src="../assets/images/santa.png" alt="Santa" srcset="" class="santa" />
+			</div>
+		</div>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

@@ -1,23 +1,93 @@
 @font-face {
-  font-family: 'CHRISTMAS DAY';
+  font-family: "CHRISTMAS DAY";
   src: url("../assets/fonts/CHRISTMAS DAY.otf");
   font-weight: normal; }
 
 @font-face {
-  font-family: 'Baskerville';
+  font-family: "Baskerville";
   src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
   font-weight: normal; }
 
 @font-face {
-  font-family: 'Baskerville';
+  font-family: "Baskerville";
   src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("truetype");
   font-style: italic; }
 
 @font-face {
-  font-family: 'Baskerville';
+  font-family: "Baskerville";
   src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
   font-weight: bold; }
 
 body {
-  font-family: 'Baskerville', Georgia, serif;
-  margin: 0; }
+  font-family: "Baskerville", Georgia, serif;
+  background: url("../assets/images/texture.svg"), #2a2a51;
+  margin: 0;
+  color: #ffffff; }
+
+.registration-container {
+  font-family: "CHRISTMAS DAY";
+  background: #37376c;
+  padding: 40px;
+  text-align: center;
+  height: 100%;
+  border-radius: 50px;
+  width: 90%;
+  margin: 0 auto; }
+  .registration-container .registration-heading {
+    font-size: 7rem;
+    line-height: 143px; }
+  .registration-container button.btn.registration-btn {
+    font-size: 3rem;
+    background-color: #ed5451;
+    padding: 20px 40px 0px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    margin-top: 30px; }
+    .registration-container button.btn.registration-btn::before {
+      content: "";
+      background: url("../assets/images/button-snow.png") center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: -45px;
+      left: -2px;
+      width: 102%;
+      height: 100%; }
+  .registration-container .registration-subheading {
+    font-family: "Baskerville";
+    font-size: 0.8rem;
+    margin-top: 10px; }
+  .registration-container .schedule-col {
+    font-family: "Baskerville";
+    font-size: 0.9rem; }
+    .registration-container .schedule-col ul li {
+      margin-bottom: 10px; }
+
+.main-navbar .nav-logo {
+  width: 100%;
+  min-width: 120px;
+  max-width: 150px; }
+
+.main-navbar .first-list li {
+  margin: auto 15px; }
+
+.main-navbar .hope-registration-form-btn {
+  background: #ed5451;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.ground-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  .ground-container .ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; }
+  .ground-container .santa {
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    width: 30%; }
