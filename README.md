@@ -1,3 +1,6 @@
+[![Deploy to cPanel](https://github.com/vinnyab28/thrill-of-hope/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/vinnyab28/thrill-of-hope/actions/workflows/main.yml)
+[![pages-build-deployment](https://github.com/vinnyab28/thrill-of-hope/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/vinnyab28/thrill-of-hope/actions/workflows/pages/pages-build-deployment)
+
 # thrill-of-hope
 Thrill Of Hope | 2022
 
