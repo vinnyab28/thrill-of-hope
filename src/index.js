@@ -1,6 +1,7 @@
 $(document).ready(() => {
 	//Can run the snowfall by calling:
 	$(document).on("click", ".enter-btn", function () {
+		$("body").removeClass("overflow-hidden");
 		$(".splash-screen").addClass("hidden");
 		snowfall.start({
 			bg: "transparent",
@@ -37,4 +38,21 @@ $(document).ready(() => {
 		$(this).hasClass("no") ? snowfall.setDensity(100) : snowfall.setDensity(0);
 		$(this).toggleClass("no");
 	});
+
+	// init ScrollMagic
+	// var controller = new ScrollMagic.Controller({
+	// 	globalSceneOptions: {
+	// 		triggerHook: "onLeave",
+	// 		duration: "100%",
+	// 	},
+	// });
+	// var sections = document.querySelectorAll("section");
+
+	// for (var i = 0; i < sections.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 		triggerElement: sections[i],
+	// 	})
+	// 		.setPin(sections[i], { pushFollowers: false })
+	// 		.addTo(controller);
+	// }
 });
