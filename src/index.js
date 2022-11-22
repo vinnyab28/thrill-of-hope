@@ -40,19 +40,19 @@ $(document).ready(() => {
 	});
 
 	// init ScrollMagic
-	// var controller = new ScrollMagic.Controller({
-	// 	globalSceneOptions: {
-	// 		triggerHook: "onLeave",
-	// 		duration: "100%",
-	// 	},
-	// });
-	// var sections = document.querySelectorAll("section");
+	var controller = new ScrollMagic.Controller({
+		globalSceneOptions: {
+			triggerHook: "onLeave",
+			duration: "100%",
+		},
+	});
+	var sections = document.querySelectorAll("section");
 
-	// for (var i = 0; i < sections.length; i++) {
-	// 	new ScrollMagic.Scene({
-	// 		triggerElement: sections[i],
-	// 	})
-	// 		.setPin(sections[i], { pushFollowers: false })
-	// 		.addTo(controller);
-	// }
+	for (var i = 0; i < sections.length; i++) {
+		new ScrollMagic.Scene({
+			triggerElement: sections[i],
+		})
+			.setPin(sections[i], { pushFollowers: false })
+			.addTo(controller);
+	}
 });
