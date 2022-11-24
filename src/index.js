@@ -39,20 +39,29 @@ $(document).ready(() => {
 		$(this).toggleClass("no");
 	});
 
-	// init ScrollMagic
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
-			triggerHook: "onLeave",
-			duration: "100%",
-		},
-	});
-	var sections = document.querySelectorAll("section");
+	// // init ScrollMagic
+	// var controller = new ScrollMagic.Controller({
+	// 	globalSceneOptions: {
+	// 		triggerHook: "onLeave",
+	// 		duration: "100%",
+	// 	},
+	// });
+	// var sections = document.querySelectorAll("section");
 
-	for (var i = 0; i < sections.length; i++) {
-		new ScrollMagic.Scene({
-			triggerElement: sections[i],
-		})
-			.setPin(sections[i], { pushFollowers: false })
-			.addTo(controller);
-	}
+	// for (var i = 0; i < sections.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 		triggerElement: sections[i],
+	// 	})
+	// 		.setPin(sections[i], { pushFollowers: false })
+	// 		.addTo(controller);
+	// }
+
+	// // init controller
+	// var controller = new ScrollMagic.Controller();
+
+	// // build scene
+	// var scene = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 300 })
+	// 	.setPin("#pin1")
+	// 	// .addIndicators({ name: "1 (duration: 300)" }) // add indicators (requires plugin)
+	// 	.addTo(controller);
 });

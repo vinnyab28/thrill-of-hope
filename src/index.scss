@@ -150,6 +150,7 @@ section {
 	min-height: 100vh;
 	position: relative;
 	background: url("../images/texture.svg"), #2a2a51;
+	border: 1px solid lightgrey;
 }
 
 /* Opening Section */
@@ -226,7 +227,7 @@ section.silver-lining-section {
 		width: 70%;
 		background: #37376c;
 		border-radius: 40px;
-		padding: 3rem 25rem 3rem 5rem;
+		padding: 40px 300px 40px 50px;
 		font-weight: lighter;
 		text-align: center;
 		margin-right: 20%;
@@ -234,13 +235,14 @@ section.silver-lining-section {
 
 		p {
 			margin-bottom: 0;
+			font-size: 0.8rem;
 		}
 
 		img.silver-lining-img {
 			position: absolute;
-			top: 20%;
-			right: -25%;
-			max-height: 100%;
+			top: 120px;
+			right: -240px;
+			max-height: 90%;
 			max-width: 100%;
 		}
 
@@ -269,7 +271,7 @@ section.silver-lining-section {
 	@media (max-width: 576px) {
 		.content-container {
 			width: 85%;
-			padding: 2rem 2rem 4rem;
+			padding: 30px 30px 60px;
 			margin: 0 auto;
 			font-size: 0.75rem;
 			position: relative;
@@ -277,22 +279,22 @@ section.silver-lining-section {
 
 			img.silver-lining-img {
 				right: -1rem;
-				bottom: -35%;
+				bottom: -150px;
 				top: unset;
-				max-width: 75%;
+				max-width: 70%;
 			}
 
 			&::before {
 				font-size: 2rem;
 				width: 75px;
-				bottom: -11rem;
-				left: 10%;
+				bottom: -160px;
+				left: 25px;
 				text-align: left;
 			}
 
 			&::after {
-				right: 75%;
-				bottom: -2rem;
+				left: 20px;
+				bottom: -20px;
 				height: 60px;
 				width: 60px;
 			}
@@ -318,6 +320,7 @@ section.joy-to-the-world-section {
 			text-align: center;
 			line-height: 30px;
 			margin: 0;
+			font-size: 0.8rem;
 		}
 	}
 
