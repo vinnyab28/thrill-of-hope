@@ -86,10 +86,12 @@ body {
 		min-width: 120px;
 		max-width: 150px;
 	}
+
 	.first-list li {
 		margin: auto 15px;
 		white-space: nowrap;
 	}
+
 	.second-list li {
 		button {
 			width: 24px;
@@ -98,6 +100,7 @@ body {
 			background-size: 100%;
 			background-repeat: no-repeat;
 			background-position: center;
+
 			&.background-snow-btn {
 				background-image: url("../images/snow-on.png");
 
@@ -115,6 +118,7 @@ body {
 			}
 		}
 	}
+
 	.hope-registration-form-btn {
 		background: #ed5451;
 		padding-left: 10px;
@@ -139,6 +143,7 @@ body {
 				width: 32px;
 				height: 32px;
 			}
+
 			&:first-child {
 				margin-right: 15px;
 			}
@@ -150,15 +155,18 @@ section {
 	min-height: 100vh;
 	position: relative;
 	background: url("../images/texture.svg"), #2a2a51;
-	border: 1px solid lightgrey;
 }
 
 /* Opening Section */
 section.opening-section {
-	background: url("../images/opening-bg.png");
-	background-position: 20% center;
-	background-size: 155%;
-	background-repeat: no-repeat;
+	.background-img-wrapper {
+		height: 100vh;
+		background: url(../images/opening-bg.png) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 
 	.opening-visual {
 		position: absolute;
@@ -168,6 +176,7 @@ section.opening-section {
 		text-align: center;
 		height: 100%;
 		width: 100%;
+
 		.center-visual {
 			display: flex;
 			justify-content: center;
@@ -179,9 +188,19 @@ section.opening-section {
 				max-height: 50%;
 			}
 		}
+
+		.bottom-text {
+			bottom: 2%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			font-weight: bolder;
+			size: 0.8rem;
+			color: #ffffff;
+		}
 	}
-	@media (max-width: 576px) {
-	}
+
+	@media (max-width: 576px) {}
 }
 
 /* Theme Section */
@@ -192,9 +211,12 @@ section.theme-section {
 
 	img.theme-img {
 		position: absolute;
-		top: 50%;
-		left: 50%;
+		top: 0;
+		bottom: 0;
+		left: 0;
 		transform: translate(-50%, -50%);
+		right: 0;
+		margin: auto;
 	}
 
 	img.santa-sleigh-img {
@@ -203,7 +225,28 @@ section.theme-section {
 		right: 1%;
 		height: 30%;
 		animation: santa-fly 0.8s ease-in-out infinite alternate;
+		opacity: 0;
+		-webkit-transform: translateY(500px);
+		-moz-transform: translateY(500px);
+		-ms-transform: translateY(500px);
+		-o-transform: translateY(500px);
+		transform: translateY(500px);
+		-webkit-transition: all 1s ease-out;
+		-moz-transition: all 1s ease-out;
+		-ms-transition: all 1s ease-out;
+		-o-transition: all 1s ease-out;
+		transition: all 1s ease-out;
+
+		&.visible {
+			opacity: 1;
+			-webkit-transform: none;
+			-moz-transform: none;
+			-ms-transform: none;
+			-o-transform: none;
+			transform: none;
+		}
 	}
+
 	@media (max-width: 576px) {
 		img.theme-img {
 			max-width: 80%;
@@ -268,6 +311,7 @@ section.silver-lining-section {
 			background-size: contain;
 		}
 	}
+
 	@media (max-width: 576px) {
 		.content-container {
 			width: 85%;
@@ -343,6 +387,7 @@ section.joy-to-the-world-section {
 		right: 0;
 		bottom: 0;
 	}
+
 	@media (max-width: 576px) {
 		.section-container {
 			width: 85%;
@@ -376,6 +421,7 @@ section.joy-to-the-world-section {
 section.registration-section {
 	position: relative;
 	padding: 120px 0;
+
 	.registration-container {
 		font-family: "CHRISTMAS DAY";
 		background: #37376c;
@@ -394,6 +440,7 @@ section.registration-section {
 		a.registration-link {
 			position: relative;
 			z-index: 1030;
+
 			button.btn.registration-btn {
 				font-size: 3rem;
 				background-color: #ed5451;
@@ -466,6 +513,7 @@ section.registration-section {
 			.registration-subheading {
 				font-size: 0.75rem;
 			}
+
 			a.registration-link {
 				button.btn.registration-btn {
 					font-size: 2.5rem;
@@ -475,6 +523,7 @@ section.registration-section {
 						top: -37px;
 					}
 				}
+
 				.schedule-col {
 					margin: 30px auto;
 					font-size: 0.7rem;
@@ -498,6 +547,7 @@ section.registration-section {
 	0% {
 		top: 0%;
 	}
+
 	10% {
 		top: -20%;
 	}
@@ -524,6 +574,7 @@ section.registration-section {
 		background-color: #8d261d;
 		color: #ffffff;
 	}
+
 	50% {
 		background-color: #ed5451;
 		color: #000000;
@@ -534,7 +585,31 @@ section.registration-section {
 	from {
 		bottom: 3%;
 	}
+
 	to {
 		bottom: 1%;
 	}
+}
+
+#theme-section-img {
+	opacity: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+#theme-section-img.visible {
+	opacity: 1;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
 }

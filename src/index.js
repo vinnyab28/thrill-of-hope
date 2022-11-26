@@ -1,4 +1,10 @@
 $(document).ready(() => {
+	// init ScrollMagic controller
+	var controller = new ScrollMagic.Controller({
+		globalSceneOptions: {
+			triggerHook: "onLeave",
+		}
+	});
 	//Can run the snowfall by calling:
 	$(document).on("click", ".enter-btn", function () {
 		$("body").removeClass("overflow-hidden");
@@ -39,29 +45,45 @@ $(document).ready(() => {
 		$(this).toggleClass("no");
 	});
 
-	// // init ScrollMagic
-	// var controller = new ScrollMagic.Controller({
-	// 	globalSceneOptions: {
-	// 		triggerHook: "onLeave",
-	// 		duration: "100%",
-	// 	},
-	// });
-	// var sections = document.querySelectorAll("section");
+	// Opening section timeline
+	var openingSectionTl = gsap.timeline();
+	openingSectionTl.to(".background-img-wrapper", { opacity: 0.3, duration: 0.1 });
+	openingSectionTl.to(".bottom-text", { opacity: 0, duration: 0.8 });
+	openingSectionTl.to("#opening-section-img", {
+		scale: 1.5, duration: 0.9, onComplete: () => {
+			snowfall.setDensity(0);
+		}
+	});
+	openingSectionTl.to("#opening-section-img", {
+		y: -200, ease: 'slow.out', duration: 0.2, onComplete: () => {
+			$(".theme-section").get(0).scrollIntoView();
+		}
+	});
+	openingSectionTl.to("#opening-section-img", { opacity: 0, duration: 0.1 });
 
-	// for (var i = 0; i < sections.length; i++) {
-	// 	new ScrollMagic.Scene({
-	// 		triggerElement: sections[i],
-	// 	})
-	// 		.setPin(sections[i], { pushFollowers: false })
-	// 		.addTo(controller);
-	// }
+	// Opening section scene
+	new ScrollMagic.Scene({
+		triggerElement: "#opening-section",
+		duration: "45%"
+	})
+		.setPin("#opening-section")
+		.setTween(openingSectionTl)
+		.addTo(controller);
 
-	// // init controller
-	// var controller = new ScrollMagic.Controller();
+	// Start snow effect when the user scrolls to the top
+	$(document).scroll(function () {
+		if ($(document).scrollTop() === 0 && !$('.background-snow-btn').hasClass('no')) {
+			snowfall.setDensity(100);
+		}
+	})
 
-	// // build scene
-	// var scene = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 300 })
-	// 	.setPin("#pin1")
-	// 	// .addIndicators({ name: "1 (duration: 300)" }) // add indicators (requires plugin)
-	// 	.addTo(controller);
+	// Theme section scene
+	new ScrollMagic.Scene({
+		triggerElement: ".theme-section",
+		duration: "50%",
+	})
+		.setClassToggle(".theme-section img", "visible") // add class to reveal
+		.setPin(".theme-section")
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
 });

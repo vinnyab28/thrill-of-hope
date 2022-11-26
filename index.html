@@ -1,192 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta property="og:title" content="Thrill of Hope | WCC Bangalore" />
-		<meta property="og:og:description" content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings." />
-		<meta property="og:url" content="https://wccbangalore.org/hope" />
-		<meta property="og:image" content="https://wccbangalore.org/hope/assets/images/splash_screen.gif" />
 
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="https://wccbangalore.org/hope">
-		<meta name="twitter:title" content="Thrill of Hope | WCC Bangalore">
-		<meta name="twitter:description" content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings.">
-		<meta name="twitter:image" content="https://wccbangalore.org/hope/assets/images/splash_screen.gif">
-		
-		<title>Thrill of Hope</title>
-		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="./assets/css/index.css" />
-	</head>
-	<body class="overflow-hidden">
-		<div class="splash-screen">
-			<img src="./assets/images/splash_screen.gif" alt="Thrill of Hope" />
-			<button class="btn enter-btn">ENTER!!!</button>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Thrill of Hope | WCC Bangalore" />
+	<meta property="og:og:description"
+		content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings." />
+	<meta property="og:url" content="https://wccbangalore.org/hope" />
+	<meta property="og:image" content="https://wccbangalore.org/hope/assets/images/splash_screen.gif" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="https://wccbangalore.org/hope">
+	<meta name="twitter:title" content="Thrill of Hope | WCC Bangalore">
+	<meta name="twitter:description"
+		content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings.">
+	<meta name="twitter:image" content="https://wccbangalore.org/hope/assets/images/splash_screen.gif">
+
+	<title>Thrill of Hope</title>
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body class="overflow-hidden">
+	<div class="splash-screen">
+		<img src="./assets/images/splash_screen.gif" alt="Thrill of Hope" />
+		<button class="btn enter-btn">ENTER!!!</button>
+	</div>
+	<div id="snow-container"></div>
+	<header class="navbar navbar-expand-lg navbar-transparent fixed-top main-navbar mb-5 mb-md-0">
+		<button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#menuNav"
+			aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+		</button>
+
+		<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
+			<img src="./assets/images/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
+		</a>
+		<ul class="navbar-nav ml-md-auto flex-row second-list d-xs-flex d-md-none">
+			<li class="nav-item">
+				<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
+			</li>
+			<li class="nav-item">
+				<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
+			</li>
+		</ul>
+		<div class="collapse navbar-collapse flex-grow-1 overflow-auto" id="menuNav">
+			<div class="navbar-nav-scroll">
+				<ul class="navbar-nav flex-row first-list">
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="https://wccbangalore.org/">Home</a>
+					</li>
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="https://wccbangalore.org/events">Events</a>
+					</li>
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="https://wccbangalore.org/gallery">Gallery</a>
+					</li>
+					<li class="nav-item font-weight-bold active border-bottom border-white">
+						<a class="nav-link text-light fw-bold" href="#">Hope</a>
+					</li>
+					<li class="nav-item rounded hope-registration-form-btn">
+						<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registration Form</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div id="snow-container"></div>
-		<header class="navbar navbar-expand-lg navbar-transparent fixed-top main-navbar mb-5 mb-md-0">
-			<button
-				class="navbar-toggler text-light"
-				type="button"
-				data-toggle="collapse"
-				data-target="#menuNav"
-				aria-controls="menuNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-			</button>
 
-			<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
-				<img src="./assets/images/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
-			</a>
-			<ul class="navbar-nav ml-md-auto flex-row second-list d-xs-flex d-md-none">
-				<li class="nav-item">
-					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
-				</li>
-				<li class="nav-item">
-					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
-				</li>
-			</ul>
-			<div class="collapse navbar-collapse flex-grow-1 overflow-auto" id="menuNav">
-				<div class="navbar-nav-scroll">
-					<ul class="navbar-nav flex-row first-list">
-						<li class="nav-item font-weight-lighter">
-							<a class="nav-link text-light" href="https://wccbangalore.org/">Home</a>
-						</li>
-						<li class="nav-item font-weight-lighter">
-							<a class="nav-link text-light" href="https://wccbangalore.org/events">Events</a>
-						</li>
-						<li class="nav-item font-weight-lighter">
-							<a class="nav-link text-light" href="https://wccbangalore.org/gallery">Gallery</a>
-						</li>
-						<li class="nav-item font-weight-bold active border-bottom border-white">
-							<a class="nav-link text-light fw-bold" href="#">Hope</a>
-						</li>
-						<li class="nav-item rounded hope-registration-form-btn">
-							<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registration Form</a>
-						</li>
-					</ul>
-				</div>
+		<ul class="navbar-nav ml-md-auto flex-row second-list d-none d-md-flex">
+			<li class="nav-item">
+				<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
+			</li>
+			<li class="nav-item">
+				<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
+			</li>
+		</ul>
+	</header>
+	<!-- Opening Section -->
+	<section class="opening-section" id="opening-section">
+		<div class="background-img-wrapper"></div>
+		<div class="opening-visual">
+			<div class="center-visual">
+				<img id="opening-section-img" src="./assets/images/center-visual.png" alt="Thrill of Hope" />
 			</div>
+			<p class="bottom-text">Scroll down to join us!</p>
+		</div>
+	</section>
 
-			<ul class="navbar-nav ml-md-auto flex-row second-list d-none d-md-flex">
-				<li class="nav-item">
-					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
-				</li>
-				<li class="nav-item">
-					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
-				</li>
-			</ul>
-		</header>
-		<!-- Opening Section -->
-		<section class="opening-section"  id="trigger1">
-			<div class="opening-visual" id="pin1">
-				<div class="center-visual">
-					<img id="animate" src="./assets/images/center-visual.png" alt="Thrill of Hope" />
-				</div>
-			</div>
-		</section>
-		<!-- Theme Section -->
-		<section class="theme-section">
-			<img src="./assets/images/theme.png" alt="Thrill of Hope" class="theme-img">
-			<img src="./assets/images/santa-sleigh.png" class="santa-sleigh-img" alt="Thrill of Hope" />
-		</section>
-		<!-- Gallery Section -->
-		<section class="gallery-section"></section>
-		<!-- Silver Lining Section -->
-		<section class="silver-lining-section  d-flex justify-content-center align-items-center">
-			<div class="container content-container">
-				<p>
-					“Every cloud has a silver lining” or “There is light at the end of the tunnel”
-					<br /><br />
-					Have you ever wondered whether this is merely a quote from a book or a tale? Have you ever questioned the truth of this? What exactly is
-					<strong>Hope</strong>? Where can one find it? <br /><br />
-					<strong>Hope</strong> comes from knowing there is light despite all the darkness. The best kind of hope is that which stays forever. We wish you will
-					discover and experience this unending Hope. <br /><br />
-					Come!
-					<br /><br />
-					Join us as we celebrate the birth of Jesus Christ and experience the <strong>Thrill of Hope</strong> it brings! <br /><br />
-					Enjoy an evening filled with games, frolics, delicious Christmas treats, festive tunes and much more.
-				</p>
-				<img src="./assets/images/silver-lining.png" alt="Silver Lining" class="silver-lining-img" />
-				<!-- <div class="content-title">
+	<!-- Theme Section -->
+	<section class="theme-section">
+		<img src="./assets/images/theme.png" alt="Thrill of Hope" class="theme-img" id="theme-section-img">
+		<img src="./assets/images/santa-sleigh.png" class="santa-sleigh-img" alt="Thrill of Hope" />
+	</section>
+	<!-- Gallery Section -->
+	<section class="gallery-section"></section>
+	<!-- Silver Lining Section -->
+	<section class="silver-lining-section  d-flex justify-content-center align-items-center">
+		<div class="container content-container">
+			<p>
+				“Every cloud has a silver lining” or “There is light at the end of the tunnel”
+				<br /><br />
+				Have you ever wondered whether this is merely a quote from a book or a tale? Have you ever questioned
+				the truth of this? What exactly is
+				<strong>Hope</strong>? Where can one find it? <br /><br />
+				<strong>Hope</strong> comes from knowing there is light despite all the darkness. The best kind of hope
+				is that which stays forever. We wish you will
+				discover and experience this unending Hope. <br /><br />
+				Come!
+				<br /><br />
+				Join us as we celebrate the birth of Jesus Christ and experience the <strong>Thrill of Hope</strong> it
+				brings! <br /><br />
+				Enjoy an evening filled with games, frolics, delicious Christmas treats, festive tunes and much more.
+			</p>
+			<img src="./assets/images/silver-lining.png" alt="Silver Lining" class="silver-lining-img" />
+			<!-- <div class="content-title">
 					<p>THE SILVER LINING</p>
 				</div> -->
+		</div>
+	</section>
+	<!-- Joy To The World Section -->
+	<section class="joy-to-the-world-section">
+		<div class="section-container">
+			<p class="section-content">
+				Joy to the world, the Lord has come.
+				<br /><br />
+				Come you faithful, oh what is Christmas without good old hymns, birth story of Jesus, cookies, gifts,
+				and a good laughter.
+				<br /><br />
+				Join us to experience the beauty of this season and explore how true Hope can bring light into your
+				hearts and to your home.
+				<br /><br />
+				Hop in as we celebrate the brilliance of Jesus birth on
+			</p>
+			<p class="section-sub-content">
+			<div class="row my-md-5 my-1">
+				<div class="col"><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</div>
+				<div class="col"><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</div>
 			</div>
-		</section>
-		<!-- Joy To The World Section -->
-		<section class="joy-to-the-world-section">
-			<div class="section-container">
-				<p class="section-content">
-					Joy to the world, the Lord has come.
-					<br /><br />
-					Come you faithful, oh what is Christmas without good old hymns, birth story of Jesus, cookies, gifts, and a good laughter.
-					<br /><br />
-					Join us to experience the beauty of this season and explore how true Hope can bring light into your hearts and to your home.
-					<br /><br />
-					Hop in as we celebrate the brilliance of Jesus birth on
-				</p>
-				<p class="section-sub-content">
-					<div class="row my-md-5 my-1">
-						<div class="col"><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</div>
-						<div class="col"><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</div>
-					</div>
-					<div class="row my-md-5 my-1">
-						<div class="col"></div>
-						<div class="col"><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</div>
-					</div>
-				</p>
+			<div class="row my-md-5 my-1">
+				<div class="col"></div>
+				<div class="col"><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</div>
 			</div>
-			<img src="./assets/images/santa-sleigh.png" alt="Santa Sleigh" class="santa-sleigh-img" />
-			<img src="./assets/images/three-wise-men.png" alt="Three wise men" class="three-wise-men-img" />
-			<img src="./assets/images/baby-jesus.png" alt="Baby Jesus" class="baby-jesus-img" />
-		</section>
-		<!-- Registration Section -->
-		<section class="registration-section">
-			<div class="container-fluid">
-				<div class="registration-container">
-					<div class="row">
-						<div class="col">
-							<p class="registration-heading">Register &amp; join us<br />this christmas</p>
-						</div>
-					</div>
-					<div class="row align-items-center">
-						<div class="col-lg-4 offset-lg-4 text-center">
-							<a href="#" class="registration-link"><button class="btn registration-btn">Count me in</button></a>
-							<p class="registration-subheading">Click the button to Register!</p>
-						</div>
-						<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
-							<ul class="list-unstyled ml-sm-5">
-								<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
-								<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
-								<li><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</li>
-							</ul>
-						</div>
+			</p>
+		</div>
+		<img src="./assets/images/santa-sleigh.png" alt="Santa Sleigh" class="santa-sleigh-img" />
+		<img src="./assets/images/three-wise-men.png" alt="Three wise men" class="three-wise-men-img" />
+		<img src="./assets/images/baby-jesus.png" alt="Baby Jesus" class="baby-jesus-img" />
+	</section>
+	<!-- Registration Section -->
+	<section class="registration-section">
+		<div class="container-fluid">
+			<div class="registration-container">
+				<div class="row">
+					<div class="col">
+						<p class="registration-heading">Register &amp; join us<br />this christmas</p>
 					</div>
 				</div>
+				<div class="row align-items-center">
+					<div class="col-lg-4 offset-lg-4 text-center">
+						<a href="#" class="registration-link"><button class="btn registration-btn">Count me
+								in</button></a>
+						<p class="registration-subheading">Click the button to Register!</p>
+					</div>
+					<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
+						<ul class="list-unstyled ml-sm-5">
+							<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
+							<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
+							<li><i class="fa fa-map-marker mr-2"></i>ELIM Camp Centre, Whitefield</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-				<div class="ground-container">
-					<img src="./assets/images/ground.png" alt="Ground" srcset="" class="ground" />
-					<img src="./assets/images/santa.png" alt="Santa" srcset="" class="santa" />
-				</div>
+			<div class="ground-container">
+				<img src="./assets/images/ground.png" alt="Ground" srcset="" class="ground" />
+				<img src="./assets/images/santa.png" alt="Santa" srcset="" class="santa" />
 			</div>
-		</section>
-		<audio id="backgroundMusic" loop="true">
-			<source src="./assets/audio/background_music.mp3" type="audio/mpeg" />
-		</audio>
-		<script src="./assets/js/jquery.slim.min.js"></script>
-		<script src="./assets/js/bootstrap.bundle.min.js"></script>
-		<script src="https://js.churchcenter.com/modal/v1"></script>
-		<script src="./assets/js/snowfall.min.js"></script>
-		<script src="./assets/js/ScrollMagic.min.js"></script>
-		<!-- <script src="./assets/js/animation.gsap.min.js"></script> -->
-		<!-- <script src="./assets/js/debug.addIndicators.min.js"></script> -->
-		<!-- Change the js back to ./src/index.js during development -->
-		<!-- <script src="./src/index.js"></script> -->
-		<!-- For production -->
-		<script src="./assets/js/thrill-of-hope.min.js"></script>
-	</body>
+		</div>
+	</section>
+	<audio id="backgroundMusic" loop="true">
+		<source src="./assets/audio/background_music.mp3" type="audio/mpeg" />
+	</audio>
+	<script src="./assets/js/gsap.min.js"></script>
+	<script src="./assets/js/ScrollMagic.min.js"></script>
+	<script src="./assets/js/animation.gsap.js"></script>
+	<!-- <script src="./assets/js/debug.addIndicators.min.js"></script> -->
+	<script src="./assets/js/jquery.slim.min.js"></script>
+	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+	<script src="https://js.churchcenter.com/modal/v1"></script>
+	<script src="./assets/js/snowfall.min.js"></script>
+	<!-- Change the js back to ./src/index.js during development -->
+	<!-- <script src="./src/index.js"></script> -->
+	<!-- For production -->
+	<script src="./assets/js/thrill-of-hope.min.js"></script>
+</body>
+
 </html>
