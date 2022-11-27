@@ -200,7 +200,11 @@ section.opening-section {
 		}
 	}
 
-	@media (max-width: 576px) {}
+	@media (max-width: 768px) {
+		.background-img-wrapper {
+			background-image: url(../images/opening-bg-small.png);
+		}
+	}
 }
 
 /* Theme Section */
