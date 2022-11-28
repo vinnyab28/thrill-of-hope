@@ -238,6 +238,7 @@ section.theme-section {
 		transform: translate(-50%, -50%);
 		right: 0;
 		margin: auto;
+		max-height: 65%;
 	}
 
 	img.santa-sleigh-img {
@@ -268,7 +269,30 @@ section.theme-section {
 		}
 	}
 
-	@media (max-width: 576px) {
+	#theme-section-img {
+		opacity: 0;
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+		transform: scale(1.5);
+		-webkit-transition: all 0.8s ease-in-out;
+		-moz-transition: all 0.8s ease-in-out;
+		-ms-transition: all 0.8s ease-in-out;
+		-o-transition: all 0.8s ease-in-out;
+		transition: all 0.8s ease-in-out;
+	}
+
+	#theme-section-img.visible {
+		opacity: 1;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+
+	@media (max-width: 991px) {
 		img.theme-img {
 			max-width: 80%;
 			transform: translate(-50%, -70%);
@@ -279,6 +303,14 @@ section.theme-section {
 			right: 0;
 			margin: 0 auto;
 			height: 20%;
+		}
+
+		#theme-section-img {
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
 		}
 	}
 }
@@ -333,7 +365,7 @@ section.silver-lining-section {
 		}
 	}
 
-	@media (max-width: 576px) {
+	@media (max-width: 991px) {
 		.content-container {
 			width: 85%;
 			padding: 30px 30px 60px;
@@ -610,27 +642,4 @@ section.registration-section {
 	to {
 		bottom: 1%;
 	}
-}
-
-#theme-section-img {
-	opacity: 0;
-	-webkit-transform: scale(1.5);
-	-moz-transform: scale(1.5);
-	-ms-transform: scale(1.5);
-	-o-transform: scale(1.5);
-	transform: scale(1.5);
-	-webkit-transition: all 0.8s ease-in-out;
-	-moz-transition: all 0.8s ease-in-out;
-	-ms-transition: all 0.8s ease-in-out;
-	-o-transition: all 0.8s ease-in-out;
-	transition: all 0.8s ease-in-out;
-}
-
-#theme-section-img.visible {
-	opacity: 1;
-	-webkit-transform: none;
-	-moz-transform: none;
-	-ms-transform: none;
-	-o-transform: none;
-	transform: none;
 }
