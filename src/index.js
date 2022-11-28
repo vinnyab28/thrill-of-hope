@@ -3,7 +3,7 @@ $(document).ready(() => {
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
 			triggerHook: "onLeave",
-		}
+		},
 	});
 	//Can run the snowfall by calling:
 	$(document).on("click", ".enter-btn", function () {
@@ -50,21 +50,26 @@ $(document).ready(() => {
 	openingSectionTl.to(".background-img-wrapper", { opacity: 0.3, duration: 0.1 });
 	openingSectionTl.to(".bottom-text", { opacity: 0, duration: 0.8 });
 	openingSectionTl.to("#opening-section-img", {
-		scale: 1.5, duration: 0.9, onComplete: () => {
+		scale: 1.5,
+		duration: 0.9,
+		onComplete: () => {
 			snowfall.setDensity(0);
-		}
+		},
 	});
 	openingSectionTl.to("#opening-section-img", {
-		y: -200, ease: 'slow.out', duration: 0.2, onComplete: () => {
+		y: -200,
+		ease: "slow.out",
+		duration: 0.2,
+		onComplete: () => {
 			$(".theme-section").get(0).scrollIntoView();
-		}
+		},
 	});
 	openingSectionTl.to("#opening-section-img", { opacity: 0, duration: 0.1 });
 
 	// Opening section scene
 	new ScrollMagic.Scene({
 		triggerElement: "#opening-section",
-		duration: "45%"
+		duration: "45%",
 	})
 		.setPin("#opening-section")
 		.setTween(openingSectionTl)
@@ -72,10 +77,10 @@ $(document).ready(() => {
 
 	// Start snow effect when the user scrolls to the top
 	$(document).scroll(function () {
-		if ($(document).scrollTop() === 0 && !$('.background-snow-btn').hasClass('no')) {
+		if ($(document).scrollTop() === 0 && !$(".background-snow-btn").hasClass("no")) {
 			snowfall.setDensity(100);
 		}
-	})
+	});
 
 	// Theme section scene
 	new ScrollMagic.Scene({
@@ -86,4 +91,13 @@ $(document).ready(() => {
 		.setPin(".theme-section")
 		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
+
+	lightGallery(document.getElementById("lightgallery"), {
+		plugins: [lgVideo],
+		// ... other settings
+	});
+
+	lightGallery(document.getElementById("open-google-map"), {
+		selector: "this",
+	});
 });

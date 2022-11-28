@@ -44,7 +44,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	background: #ffffff;
-	z-index: 1031;
+	z-index: 1099;
 	width: 100%;
 	height: 100%;
 	transition: 1.5s all;
@@ -81,6 +81,7 @@ body {
 }
 
 .main-navbar {
+	z-index: 1045;
 	.nav-logo {
 		width: 100%;
 		min-width: 120px;
@@ -316,6 +317,53 @@ section.theme-section {
 }
 
 /* Gallery Section */
+.gallery-section {
+	.section-title {
+		font-family: "CHRISTMAS DAY", Georgia, Serif;
+		font-size: 5rem;
+		margin-bottom: 5rem;
+	}
+	#lightgallery {
+		gap: 20px;
+		a {
+			cursor: pointer;
+			transition: 0.3s all;
+			text-decoration: none;
+
+			&:nth-child(2) {
+				transform: scale(1.2);
+			}
+
+			figure {
+				img {
+					border: 1px solid white;
+					border-radius: 10px;
+					width: 400px;
+					height: 225px;
+					box-shadow: rgba($color: #000000, $alpha: 1) 0px 0px 10px;
+				}
+
+				figcaption {
+					margin-top: 5px;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 576px) {
+		#lightgallery {
+			a {
+				figure {
+					img {
+						width: 300px;
+						height: 169px;
+					}
+				}
+			}
+		}
+	}
+}
 
 /* About Section */
 section.silver-lining-section {
@@ -324,7 +372,7 @@ section.silver-lining-section {
 		background: #37376c;
 		border-radius: 40px;
 		padding: 40px 300px 40px 50px;
-		font-weight: lighter;
+
 		text-align: center;
 		margin-right: 20%;
 		position: relative;
@@ -642,4 +690,33 @@ section.registration-section {
 	to {
 		bottom: 1%;
 	}
+}
+
+#theme-section-img {
+	opacity: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+#theme-section-img.visible {
+	opacity: 1;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+
+.lg-content,
+.lg-toolbar,
+.lg-components {
+	background: #000;
 }
