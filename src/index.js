@@ -36,8 +36,7 @@ $(document).ready(() => {
 	});
 
 	$(document).on("click", ".background-music-btn", function () {
-		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
-		$(this).toggleClass("no");
+		toggleMusic();
 	});
 
 	$(document).on("click", ".background-snow-btn", function () {
@@ -92,7 +91,16 @@ $(document).ready(() => {
 		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 
-	lightGallery(document.getElementById("lightgallery"), {
+	const lg = document.getElementById("lightgallery");
+	lg.addEventListener("lgBeforeOpen", () => {
+		toggleMusic();
+	});
+
+	lg.addEventListener("lgAfterClose", () => {
+		toggleMusic();
+	});
+
+	lightGallery(lg, {
 		plugins: [lgVideo],
 		// ... other settings
 	});
@@ -100,4 +108,9 @@ $(document).ready(() => {
 	lightGallery(document.getElementById("open-google-map"), {
 		selector: "this",
 	});
+
+	const toggleMusic = () => {
+		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
+		$(this).toggleClass("no");
+	};
 });
