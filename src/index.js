@@ -41,7 +41,7 @@ $(document).ready(() => {
 
 	$(document).on("click", ".background-snow-btn", function () {
 		$(this).hasClass("no") ? snowfall.setDensity(100) : snowfall.setDensity(0);
-		$(this).toggleClass("no");
+		$(".background-snow-btn").toggleClass("no");
 	});
 
 	// Opening section timeline
@@ -111,6 +111,6 @@ $(document).ready(() => {
 
 	const toggleMusic = () => {
 		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
-		$(this).toggleClass("no");
+		$(".background-music-btn").toggleClass("no");
 	};
 });

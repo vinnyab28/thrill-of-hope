@@ -28,7 +28,7 @@ html {
 
 body {
 	font-family: "Baskerville", Georgia, serif;
-	background: url("../images/texture.svg"), #2a2a51;
+	background: url("../images/svg/texture.svg"), #2a2a51;
 	margin: 0;
 	color: #ffffff;
 	font-size: 14px;
@@ -103,18 +103,18 @@ body {
 			background-position: center;
 
 			&.background-snow-btn {
-				background-image: url("../images/snow-on.png");
+				background-image: url("../images/svg/snow-on.svg");
 
 				&.no {
-					background-image: url("../images/snow-off.png");
+					background-image: url("../images/svg/snow-off.svg");
 				}
 			}
 
 			&.background-music-btn {
-				background-image: url("../images/music-on.png");
+				background-image: url("../images/svg/music-on.svg");
 
 				&.no {
-					background-image: url("../images/music-off.png");
+					background-image: url("../images/svg/music-off.svg");
 				}
 			}
 		}
@@ -172,14 +172,14 @@ body {
 section {
 	min-height: 100vh;
 	position: relative;
-	background: url("../images/texture.svg"), #2a2a51;
+	background: url("../images/svg/texture.svg"), #2a2a51;
 }
 
 /* Opening Section */
 section.opening-section {
 	.background-img-wrapper {
 		height: 100vh;
-		background: url(../images/opening-bg.png) no-repeat center center fixed;
+		background: url("../images/opening-bg.png") no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -220,14 +220,14 @@ section.opening-section {
 
 	@media (max-width: 768px) {
 		.background-img-wrapper {
-			background-image: url(../images/opening-bg-small.png);
+			background-image: url("../images/opening-bg-small.png");
 		}
 	}
 }
 
 /* Theme Section */
 section.theme-section {
-	// background: url("../images/theme.png");
+	// background: url("../images/svg/theme.svg");
 	// background-position: center;
 	// background-repeat: no-repeat;
 
@@ -406,7 +406,7 @@ section.silver-lining-section {
 			bottom: -5rem;
 			height: 100px;
 			width: 100px;
-			background-image: url("../images/quote.png");
+			background-image: url("../images/svg/quote.svg");
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
@@ -555,7 +555,7 @@ section.registration-section {
 
 				&::before {
 					content: "";
-					background: url("../images/button-snow.png") center no-repeat;
+					background: url("../images/svg/button-snow.svg") center no-repeat;
 					background-size: contain;
 					position: absolute;
 					top: -45px;
