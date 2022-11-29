@@ -41,13 +41,17 @@ $(document).ready(() => {
 
 	$(document).on("click", ".background-snow-btn", function () {
 		$(this).hasClass("no") ? snowfall.setDensity(100) : snowfall.setDensity(0);
-		$(this).toggleClass("no");
+		$(".background-snow-btn").toggleClass("no");
 	});
 
 	// Opening section timeline
 	var openingSectionTl = gsap.timeline();
 	openingSectionTl.to(".background-img-wrapper", { opacity: 0.3, duration: 0.1 });
 	openingSectionTl.to(".bottom-text", { opacity: 0, duration: 0.8 });
+	openingSectionTl.to("#opening-section-img-wrapper", {
+		opacity: 0,
+		duration: 0.5,
+	});
 	openingSectionTl.to("#opening-section-img", {
 		scale: 1.5,
 		duration: 0.9,
@@ -111,6 +115,6 @@ $(document).ready(() => {
 
 	const toggleMusic = () => {
 		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
-		$(this).toggleClass("no");
+		$(".background-music-btn").toggleClass("no");
 	};
 });

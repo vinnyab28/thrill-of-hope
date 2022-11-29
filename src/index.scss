@@ -28,7 +28,7 @@ html {
 
 body {
 	font-family: "Baskerville", Georgia, serif;
-	background: url("../images/texture.svg"), #2a2a51;
+	background: url("../images/svg/texture.svg"), #2a2a51;
 	margin: 0;
 	color: #ffffff;
 	font-size: 14px;
@@ -82,6 +82,7 @@ body {
 
 .main-navbar {
 	z-index: 1045;
+
 	.nav-logo {
 		width: 100%;
 		min-width: 120px;
@@ -103,18 +104,18 @@ body {
 			background-position: center;
 
 			&.background-snow-btn {
-				background-image: url("../images/snow-on.png");
+				background-image: url("../images/svg/snow-on.svg");
 
 				&.no {
-					background-image: url("../images/snow-off.png");
+					background-image: url("../images/svg/snow-off.svg");
 				}
 			}
 
 			&.background-music-btn {
-				background-image: url("../images/music-on.png");
+				background-image: url("../images/svg/music-on.svg");
 
 				&.no {
-					background-image: url("../images/music-off.png");
+					background-image: url("../images/svg/music-off.svg");
 				}
 			}
 		}
@@ -152,6 +153,9 @@ body {
 	}
 
 	.main-navbar {
+		padding-top: 0;
+		padding-bottom: 0;
+
 		.first-list {
 			margin-bottom: 15px;
 		}
@@ -172,14 +176,14 @@ body {
 section {
 	min-height: 100vh;
 	position: relative;
-	background: url("../images/texture.svg"), #2a2a51;
+	background: url("../images/svg/texture.svg"), #2a2a51;
 }
 
 /* Opening Section */
 section.opening-section {
 	.background-img-wrapper {
 		height: 100vh;
-		background: url(../images/opening-bg.png) no-repeat center center fixed;
+		background: url("../images/opening-bg.png") no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -204,11 +208,16 @@ section.opening-section {
 
 			img {
 				max-height: 50%;
+
+				&#opening-section-img-wrapper {
+					transform: scale(1.3);
+					position: absolute;
+				}
 			}
 		}
 
 		.bottom-text {
-			bottom: 2%;
+			bottom: 5%;
 			position: absolute;
 			left: 0;
 			right: 0;
@@ -216,18 +225,35 @@ section.opening-section {
 			size: 0.8rem;
 			color: #ffffff;
 		}
+
+		@media (max-width: 768px) {
+			.bottom-text {
+				bottom: 15%;
+			}
+		}
 	}
 
 	@media (max-width: 768px) {
 		.background-img-wrapper {
-			background-image: url(../images/opening-bg-small.png);
+			background-image: url("../images/opening-bg-small.png");
+		}
+
+		.opening-visual {
+			.center-visual {
+				img {
+					max-width: 50%;
+					&#opening-section-img-wrapper {
+						transform: scale(1.4);
+					}
+				}
+			}
 		}
 	}
 }
 
 /* Theme Section */
 section.theme-section {
-	// background: url("../images/theme.png");
+	// background: url("../images/svg/theme.svg");
 	// background-position: center;
 	// background-repeat: no-repeat;
 
@@ -323,8 +349,10 @@ section.theme-section {
 		font-size: 5rem;
 		margin-bottom: 5rem;
 	}
+
 	#lightgallery {
 		gap: 20px;
+
 		a {
 			cursor: pointer;
 			transition: 0.3s all;
@@ -406,7 +434,7 @@ section.silver-lining-section {
 			bottom: -5rem;
 			height: 100px;
 			width: 100px;
-			background-image: url("../images/quote.png");
+			background-image: url("../images/svg/quote.svg");
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
@@ -555,7 +583,7 @@ section.registration-section {
 
 				&::before {
 					content: "";
-					background: url("../images/button-snow.png") center no-repeat;
+					background: url("../images/svg/button-snow.svg") center no-repeat;
 					background-size: contain;
 					position: absolute;
 					top: -45px;
