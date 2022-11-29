@@ -1,0 +1,31 @@
+name: Deploy to cPanel
+on:
+  push:
+    branches:
+      - main
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+      # Deploy to cPanel
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp.wccbangalore.org
+          ftp-username: ${{ secrets.FTP_USER }}
+          ftp-password: ${{ secrets.FTP_PASS }}
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .babelrc
+            .gitignore
+            README.md
+            package-lock.json
+            package.json
+            webpack.config.js
+          dry-run: true
