@@ -208,6 +208,11 @@ section.opening-section {
 
 			img {
 				max-height: 50%;
+
+				&#opening-section-img-wrapper {
+					transform: scale(1.3);
+					position: absolute;
+				}
 			}
 		}
 
@@ -231,6 +236,17 @@ section.opening-section {
 	@media (max-width: 768px) {
 		.background-img-wrapper {
 			background-image: url("../images/opening-bg-small.png");
+		}
+
+		.opening-visual {
+			.center-visual {
+				img {
+					max-width: 50%;
+					&#opening-section-img-wrapper {
+						transform: scale(1.4);
+					}
+				}
+			}
 		}
 	}
 }

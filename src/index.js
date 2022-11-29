@@ -48,6 +48,10 @@ $(document).ready(() => {
 	var openingSectionTl = gsap.timeline();
 	openingSectionTl.to(".background-img-wrapper", { opacity: 0.3, duration: 0.1 });
 	openingSectionTl.to(".bottom-text", { opacity: 0, duration: 0.8 });
+	openingSectionTl.to("#opening-section-img-wrapper", {
+		opacity: 0,
+		duration: 0.5,
+	});
 	openingSectionTl.to("#opening-section-img", {
 		scale: 1.5,
 		duration: 0.9,
