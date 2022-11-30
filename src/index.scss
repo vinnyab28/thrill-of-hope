@@ -236,6 +236,7 @@ section.opening-section {
 	@media (max-width: 768px) {
 		.background-img-wrapper {
 			background-image: url("../images/opening-bg-small.png");
+			background-attachment: scroll;
 		}
 
 		.opening-visual {
@@ -478,12 +479,15 @@ section.silver-lining-section {
 /* Joy to the world section */
 section.joy-to-the-world-section {
 	position: relative;
+	background: url("../images/stars-background.png") no-repeat;
+	background-size: cover;
 
 	.section-container {
 		position: absolute;
-		top: 15%;
-		right: 15%;
-		width: 40%;
+		top: 20%;
+		left: 28%;
+		width: 36%;
+		text-align: center;
 
 		p.section-content {
 			background: #37376c;
@@ -499,10 +503,12 @@ section.joy-to-the-world-section {
 
 	img.santa-sleigh-img {
 		position: absolute;
-		top: 10%;
-		left: 5%;
+		top: -3%;
+		right: 2%;
 		max-width: 25%;
-		transform: rotateY(180deg) rotateZ(20deg);
+		z-index: 1;
+		transform: matrix(0.99, 0.13, -0.13, 0.99, 0, 0);
+		animation: santa-fly-2 0.8s ease-in-out infinite alternate;
 	}
 
 	img.three-wise-men-img {
@@ -517,27 +523,73 @@ section.joy-to-the-world-section {
 		bottom: 0;
 	}
 
-	@media (max-width: 576px) {
-		.section-container {
+	.vector {
+		.line {
 			width: 85%;
-			top: 25%;
-			right: 0;
-			left: 0;
-			margin: 0 auto;
+		}
+		position: absolute;
+		top: 25%;
+		width: 95%;
+	}
+
+	div i {
+		font-size: 28px;
+		vertical-align: middle;
+	}
+
+	.location {
+		position: absolute;
+		bottom: 10px;
+		right: 27%;
+		z-index: 1032;
+		background: url(../images/svg/texture.svg), #2a2a51;
+	}
+
+	@media (max-width: 991px) {
+		min-height: 750px;
+		.section-container {
+			width: 80%;
+			top: 28%;
+			left: 54px;
 
 			p.section-content {
-				padding: 2rem 1rem;
+				padding: 1rem;
+				line-height: 18px;
+				margin-bottom: 20px;
+			}
+
+			.row {
+				font-size: 12px;
+				font-weight: 600;
 				line-height: 25px;
+				i {
+					font-size: 14px;
+				}
 			}
 		}
 
-		img.santa-sleigh-img {
-			top: 20%;
-			max-width: 30%;
+		img.three-wise-men-img {
+			bottom: 70px;
+			max-width: 150px;
 		}
 
-		img.three-wise-men-img {
-			max-width: 40%;
+		.vector {
+			.line {
+				height: 500px;
+			}
+			height: 550px;
+			width: 360px;
+		}
+
+		.location {
+			right: 65px;
+			left: unset;
+		}
+	}
+	@media (max-width: 576px) {
+		background: url("../images/stars-background-small.png") no-repeat;
+		img.santa-sleigh-img {
+			max-width: 30%;
 		}
 
 		img.baby-jesus-img {
@@ -717,6 +769,28 @@ section.registration-section {
 
 	to {
 		bottom: 1%;
+	}
+}
+
+:root {
+	--santa-top-pos: -18%;
+	--santa-bottom-pos: -20%;
+}
+
+@media (max-width: 991px) {
+	:root {
+		--santa-top-pos: -3%;
+		--santa-bottom-pos: -5%;
+	}
+}
+
+@keyframes santa-fly-2 {
+	from {
+		top: var(--santa-top-pos);
+	}
+
+	to {
+		top: var(--santa-bottom-pos);
 	}
 }
 

@@ -88,7 +88,7 @@ $(document).ready(() => {
 	// Theme section scene
 	new ScrollMagic.Scene({
 		triggerElement: ".theme-section",
-		duration: "50%",
+		duration: "150%",
 	})
 		.setClassToggle(".theme-section img", "visible") // add class to reveal
 		.setPin(".theme-section")
