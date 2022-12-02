@@ -144,47 +144,22 @@ $(document).ready(() => {
 			y: openGoogleMap.offsetTop + openGoogleMap.offsetHeight / 2,
 		};
 
-		// var dStrLeft =
-		// 	"M" +
-		// 	santaSleighLeft.x +
-		// 	"," +
-		// 	santaSleighLeft.y +
-		// 	" " +
-		// 	"C" +
-		// 	(santaSleighLeft.x - 100) +
-		// 	"," +
-		// 	santaSleighLeft.y +
-		// 	" " +
-		// 	(locationLeft.x - 100) +
-		// 	"," +
-		// 	locationLeft.y +
-		// 	" " +
-		// 	locationLeft.x +
-		// 	"," +
-		// 	locationLeft.y;
-		// arrowLeft.setAttribute("d", dStrLeft);
-		var dStrRight =
-			"M" +
-			santaSleighLeft.x +
-			"," +
-			santaSleighLeft.y +
-			" " +
-			"C" +
-			(santaSleighLeft.x - locationLeft.x) +
-			"," +
-			santaSleighLeft.y +
-			" " +
-			(locationLeft.x - santaSleighLeft.x) +
-			"," +
-			locationLeft.y +
-			" " +
-			locationLeft.x +
-			"," +
-			locationLeft.y;
-		dStrRight = `M ${santaSleighLeft.x}, ${santaSleighLeft.y} C ${santaSleighLeft.x - locationLeft.x}, ${santaSleighLeft.y} ${
-			locationLeft.x - santaSleighLeft.x
-		}, ${locationLeft.y} ${locationLeft.x},${locationLeft.y}`;
+		var dStrRight;
+		if (window.innerWidth > 480) {
+			dStrRight = `M ${santaSleighLeft.x}, ${santaSleighLeft.y} C ${santaSleighLeft.x - locationLeft.x}, ${santaSleighLeft.y} ${
+				locationLeft.x - santaSleighLeft.x
+			}, ${locationLeft.y} ${locationLeft.x},${locationLeft.y}`;
+		} else {
+			dStrRight = `M ${santaSleighLeft.x}, ${santaSleighLeft.y - santaSleighLeft.y - santaSleighLeft.y} C ${santaSleighLeft.x + locationLeft.x} ${
+				santaSleighLeft.y - santaSleighLeft.y - santaSleighLeft.y
+			}, ${santaSleighLeft.x - 100} 0, 20 ${santaSleighLeft.y - santaSleighLeft.y - santaSleighLeft.y} C 0 20, 0 20, 20 ${locationLeft.y + 20} C 20 ${
+				locationLeft.y + 20
+			}, 25 ${locationLeft.y + 60}, ${locationLeft.x + 40} ${locationLeft.y + 50}`;
+		}
 
+		console.log(dStrRight);
+		// M 236, -8 C 230.88333129882812, -8 -230.88333129882812, 525.5 5.116668701171875,525.5
+		// M 250, 8 C 250 8, 150 0, 20 8 C 0 20, 0 20, 20 570 C 30 580, 50 580, 60 570
 		arrowRight.setAttribute("d", dStrRight);
 	};
 

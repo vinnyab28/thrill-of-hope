@@ -515,6 +515,9 @@ section.joy-to-the-world-section {
 	}
 
 	@media (max-width: 576px) {
+		svg#drawSVG {
+			top: -40px;
+		}
 		.section-container {
 			width: 85%;
 			top: 25%;
