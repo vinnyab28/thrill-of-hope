@@ -109,7 +109,10 @@ $(document).ready(() => {
 		// ... other settings
 	});
 
-	lightGallery(document.getElementById("open-google-map"), {
+	lightGallery(document.getElementById("open-google-map-1"), {
+		selector: "this",
+	});
+	lightGallery(document.getElementById("open-google-map-2"), {
 		selector: "this",
 	});
 
@@ -117,4 +120,73 @@ $(document).ready(() => {
 		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
 		$(".background-music-btn").toggleClass("no");
 	};
+
+	var santaSleigh = document.querySelector("#santaSleigh");
+	var openGoogleMap = document.querySelector("#open-google-map-1");
+	// var arrowLeft = document.querySelector("#arrowLeft");
+	var arrowRight = document.querySelector("#arrowRight");
+
+	var drawConnector = function () {
+		var santaSleighLeft = {
+			x: santaSleigh.offsetLeft - 8,
+			y: santaSleigh.offsetTop + santaSleigh.offsetHeight / 2,
+		};
+		var santaSleighRight = {
+			x: santaSleigh.offsetLeft + santaSleigh.offsetWidth + 8,
+			y: santaSleigh.offsetTop + santaSleigh.offsetHeight / 2,
+		};
+		var locationLeft = {
+			x: openGoogleMap.getBoundingClientRect().left - 8,
+			y: openGoogleMap.parentNode.offsetTop + openGoogleMap.offsetHeight / 2,
+		};
+		var locationRight = {
+			x: openGoogleMap.offsetLeft + openGoogleMap.offsetWidth + 8,
+			y: openGoogleMap.offsetTop + openGoogleMap.offsetHeight / 2,
+		};
+
+		// var dStrLeft =
+		// 	"M" +
+		// 	santaSleighLeft.x +
+		// 	"," +
+		// 	santaSleighLeft.y +
+		// 	" " +
+		// 	"C" +
+		// 	(santaSleighLeft.x - 100) +
+		// 	"," +
+		// 	santaSleighLeft.y +
+		// 	" " +
+		// 	(locationLeft.x - 100) +
+		// 	"," +
+		// 	locationLeft.y +
+		// 	" " +
+		// 	locationLeft.x +
+		// 	"," +
+		// 	locationLeft.y;
+		// arrowLeft.setAttribute("d", dStrLeft);
+		var dStrRight =
+			"M" +
+			santaSleighLeft.x +
+			"," +
+			santaSleighLeft.y +
+			" " +
+			"C" +
+			(santaSleighLeft.x - locationLeft.x) +
+			"," +
+			santaSleighLeft.y +
+			" " +
+			(locationLeft.x - santaSleighLeft.x) +
+			"," +
+			locationLeft.y +
+			" " +
+			locationLeft.x +
+			"," +
+			locationLeft.y;
+		dStrRight = `M ${santaSleighLeft.x}, ${santaSleighLeft.y} C ${santaSleighLeft.x - locationLeft.x}, ${santaSleighLeft.y} ${
+			locationLeft.x - santaSleighLeft.x
+		}, ${locationLeft.y} ${locationLeft.x},${locationLeft.y}`;
+
+		arrowRight.setAttribute("d", dStrRight);
+	};
+
+	setTimeout(drawConnector, 250);
 });

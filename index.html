@@ -1,256 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:title" content="A Thrill of Hope | WCC Bangalore" />
+		<meta
+			property="og:description"
+			content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings."
+		/>
+		<meta property="og:url" content="https://wccbangalore.org/hope" />
+		<meta property="og:image" content="https://wccbangalore.org/hope/assets/images/splash_screen_resized.png" />
 
-	<meta property="og:title" content="A Thrill of Hope | WCC Bangalore" />
-	<meta property="og:description"
-		content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings." />
-	<meta property="og:url" content="https://wccbangalore.org/hope" />
-	<meta property="og:image" content="https://wccbangalore.org/hope/assets/images/splash_screen_resized.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="https://wccbangalore.org/hope" />
+		<meta name="twitter:title" content="A Thrill of Hope | WCC Bangalore" />
+		<meta
+			name="twitter:description"
+			content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings."
+		/>
+		<meta name="twitter:image" content="https://wccbangalore.org/hope/assets/images/splash_screen_resized.png" />
 
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="https://wccbangalore.org/hope" />
-	<meta name="twitter:title" content="A Thrill of Hope | WCC Bangalore" />
-	<meta name="twitter:description"
-		content="Join us at WCC Bangalore @ 4:30 PM as we celebrate the birth of Jesus Christ and experience the thrill of hope it brings." />
-	<meta name="twitter:image" content="https://wccbangalore.org/hope/assets/images/splash_screen_resized.png" />
+		<title>WCC Bangalore | A Thrill of Hope</title>
+		<link rel="icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./assets/css/index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery-bundle.min.css"
+			integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
 
-	<title>WCC Bangalore | A Thrill of Hope</title>
-	<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-	<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="./assets/css/index.css" />
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery-bundle.min.css"
-		integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+	<body class="overflow-hidden">
+		<div class="splash-screen">
+			<img src="./assets/images/splash_screen-min.gif" alt="A Thrill of Hope" />
+			<button class="btn enter-btn">ENTER!</button>
+		</div>
+		<div id="snow-container"></div>
+		<header role="navigation" class="navbar navbar-expand-lg navbar-transparent fixed-top main-navbar mb-1 mb-md-0">
+			<button
+				class="navbar-toggler text-light"
+				type="button"
+				data-toggle="collapse"
+				data-target="#menuNav"
+				aria-controls="menuNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+			</button>
 
-<body class="overflow-hidden">
-	<div class="splash-screen">
-		<img src="./assets/images/splash_screen-min.gif" alt="A Thrill of Hope" />
-		<button class="btn enter-btn">ENTER!</button>
-	</div>
-	<div id="snow-container"></div>
-	<header role="navigation" class="navbar navbar-expand-lg navbar-transparent fixed-top main-navbar mb-1 mb-md-0">
-		<button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#menuNav"
-			aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-		</button>
-
-		<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
-			<img src="./assets/images/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
-		</a>
-		<ul class="navbar-nav ml-md-auto flex-row second-list d-xs-flex d-md-none">
-			<li class="nav-item">
-				<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
-			</li>
-			<li class="nav-item">
-				<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
-			</li>
-		</ul>
-		<div class="collapse navbar-collapse navbar-nav-scroll flex-grow-1 overflow-auto" id="menuNav">
-			<ul class="navbar-nav first-list">
-				<li class="nav-item font-weight-lighter">
-					<a class="nav-link text-light" href="https://wccbangalore.org/">Home</a>
+			<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="WCC Bangalore">
+				<img src="./assets/images/wcc-logo-white-small.png" alt="WCC Bangalore" srcset="" class="nav-logo" />
+			</a>
+			<ul class="navbar-nav ml-md-auto flex-row second-list d-xs-flex d-md-none">
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
 				</li>
-				<li class="nav-item font-weight-lighter">
-					<a class="nav-link text-light" href="https://wccbangalore.org/events">Events</a>
-				</li>
-				<li class="nav-item font-weight-lighter">
-					<a class="nav-link text-light" href="https://wccbangalore.org/gallery">Gallery</a>
-				</li>
-				<li class="nav-item font-weight-bold active border-bottom border-white">
-					<a class="nav-link text-light fw-bold" href="#">Hope</a>
-				</li>
-				<li class="nav-item rounded hope-registration-form-btn">
-					<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registration Form</a>
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
 				</li>
 			</ul>
-		</div>
-
-		<ul class="navbar-nav ml-md-auto flex-row second-list d-none d-md-flex">
-			<li class="nav-item">
-				<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
-			</li>
-			<li class="nav-item">
-				<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
-			</li>
-		</ul>
-	</header>
-	<!-- Opening Section -->
-	<section class="opening-section" id="opening-section">
-		<div class="background-img-wrapper"></div>
-		<div class="opening-visual">
-			<div class="center-visual">
-				<img id="opening-section-img-wrapper" src="./assets/images/svg-min/text-min.svg"
-					alt="A Thrill of Hope" />
-				<img id="opening-section-img" src="./assets/images/svg-min/center-visual-min.svg"
-					alt="A Thrill of Hope" />
+			<div class="collapse navbar-collapse navbar-nav-scroll flex-grow-1 overflow-auto" id="menuNav">
+				<ul class="navbar-nav first-list">
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="https://wccbangalore.org/">Home</a>
+					</li>
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="https://wccbangalore.org/events">Events</a>
+					</li>
+					<li class="nav-item font-weight-lighter">
+						<a class="nav-link text-light" href="https://wccbangalore.org/gallery">Gallery</a>
+					</li>
+					<li class="nav-item font-weight-bold active border-bottom border-white">
+						<a class="nav-link text-light fw-bold" href="#">Hope</a>
+					</li>
+					<li class="nav-item rounded hope-registration-form-btn">
+						<a class="nav-link text-light fw-bold registration-link" href="#">Hope Registration Form</a>
+					</li>
+				</ul>
 			</div>
-			<p class="bottom-text">Scroll down to join us!</p>
-		</div>
-	</section>
 
-	<!-- Theme Section -->
-	<section class="theme-section">
-		<img src="./assets/images/svg-min/theme-min.svg" alt="Thrill of Hope" class="theme-img"
-			id="theme-section-img" />
-		<img src="./assets/images/svg-min/santa-sleigh-min.svg" class="santa-sleigh-img" alt="A Thrill of Hope" />
-	</section>
-	<!-- Gallery Section -->
-	<section class="gallery-section d-flex justify-content-center align-items-center flex-column">
-		<h1 class="section-title text-center">GALLERY</h1>
-		<div id="lightgallery" style="position: relative; z-index: 1032"
-			class="d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row">
-			<a data-lg-size="1280-720" data-src="https://youtu.be/NTwBqdV0Pbc"
-				data-poster="https://img.youtube.com/vi/NTwBqdV0Pbc/maxresdefault.jpg"
-				data-sub-html="<h4>WCC Christmas Service - 2021</h4>">
-				<figure>
-					<img width="400" height="225" class="img-responsive"
-						src="https://img.youtube.com/vi/NTwBqdV0Pbc/maxresdefault.jpg" />
-					<figcaption>WCC Christmas Service - 2021</figcaption>
-				</figure>
-			</a>
-			<a data-lg-size="1280-720" data-src="https://youtu.be/Wdvzbh06ngo"
-				data-poster="https://img.youtube.com/vi/Wdvzbh06ngo/maxresdefault.jpg"
-				data-sub-html="<h4>Christmas 2022 Trailer | A Thrill Of Hope</h4>">
-				<figure>
-					<img width="400" height="225" class="img-responsive"
-						src="https://img.youtube.com/vi/Wdvzbh06ngo/maxresdefault.jpg" />
-					<figcaption>Christmas 2022 Trailer | A Thrill Of Hope</figcaption>
-				</figure>
-			</a>
-			<a data-lg-size="1280-720" data-src="https://youtu.be/qf6igM-emUM"
-				data-poster="https://img.youtube.com/vi/qf6igM-emUM/maxresdefault.jpg" data-sub-html="">
-				<figure>
-					<img width="400" height="225" class="img-responsive"
-						src="https://img.youtube.com/vi/qf6igM-emUM/maxresdefault.jpg" />
-					<figcaption>Christmas Online Service - 25th Dec 2020</figcaption>
-				</figure>
-			</a>
-		</div>
-	</section>
-	<!-- Silver Lining Section -->
-	<section class="silver-lining-section d-flex justify-content-center align-items-center">
-		<div class="container content-container">
-			<p>
-				“Every cloud has a silver lining” or “There is light at the end of the tunnel”
-				<br /><br />
-				Have you ever wondered whether this is merely a quote from a book or a tale? Have you ever questioned
-				the truth of this? What exactly is
-				<span class="h6 font-weight-bold">Hope</span>? Where can one find it? <br /><br />
-				<span class="h6 font-weight-bold">Hope</span> comes from knowing there is light despite all the
-				darkness. The best kind of hope is that which stays
-				forever. We wish you will discover and experience this unending Hope. <br /><br />
-				Come!
-				<br /><br />
-				Join us as we celebrate the birth of Jesus Christ and experience the <span
-					class="h6 font-weight-bold">Thrill of Hope</span> it brings! <br /><br />
-				Enjoy an evening filled with games, frolics, delicious Christmas treats, festive tunes and much more.
-			</p>
-			<img src="./assets/images/svg-min/silver-lining-min.svg" alt="Silver Lining" class="silver-lining-img" />
-			<!-- <div class="content-title">
+			<ul class="navbar-nav ml-md-auto flex-row second-list d-none d-md-flex">
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-snow-btn"></button>
+				</li>
+				<li class="nav-item">
+					<button class="btn nav-link mr-md-2 text-light rounded-circle background-music-btn"></button>
+				</li>
+			</ul>
+		</header>
+		<!-- Opening Section -->
+		<section class="opening-section" id="opening-section">
+			<div class="background-img-wrapper"></div>
+			<div class="opening-visual">
+				<div class="center-visual">
+					<img id="opening-section-img-wrapper" src="./assets/images/svg-min/text-min.svg" alt="A Thrill of Hope" />
+					<img id="opening-section-img" src="./assets/images/svg-min/center-visual-min.svg" alt="A Thrill of Hope" />
+				</div>
+				<p class="bottom-text">Scroll down to join us!</p>
+			</div>
+		</section>
+
+		<!-- Theme Section -->
+		<section class="theme-section">
+			<img src="./assets/images/svg-min/theme-min.svg" alt="Thrill of Hope" class="theme-img" id="theme-section-img" />
+			<img src="./assets/images/svg-min/santa-sleigh-min.svg" class="santa-sleigh-img" alt="A Thrill of Hope" />
+		</section>
+		<!-- Gallery Section -->
+		<section class="gallery-section d-flex justify-content-center align-items-center flex-column">
+			<h1 class="section-title text-center">GALLERY</h1>
+			<div
+				id="lightgallery"
+				style="position: relative; z-index: 1032"
+				class="d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row"
+			>
+				<a
+					data-lg-size="1280-720"
+					data-src="https://youtu.be/NTwBqdV0Pbc"
+					data-poster="https://img.youtube.com/vi/NTwBqdV0Pbc/maxresdefault.jpg"
+					data-sub-html="<h4>WCC Christmas Service - 2021</h4>"
+				>
+					<figure>
+						<img width="400" height="225" class="img-responsive" src="https://img.youtube.com/vi/NTwBqdV0Pbc/maxresdefault.jpg" />
+						<figcaption>WCC Christmas Service - 2021</figcaption>
+					</figure>
+				</a>
+				<a
+					data-lg-size="1280-720"
+					data-src="https://youtu.be/Wdvzbh06ngo"
+					data-poster="https://img.youtube.com/vi/Wdvzbh06ngo/maxresdefault.jpg"
+					data-sub-html="<h4>Christmas 2022 Trailer | A Thrill Of Hope</h4>"
+				>
+					<figure>
+						<img width="400" height="225" class="img-responsive" src="https://img.youtube.com/vi/Wdvzbh06ngo/maxresdefault.jpg" />
+						<figcaption>Christmas 2022 Trailer | A Thrill Of Hope</figcaption>
+					</figure>
+				</a>
+				<a
+					data-lg-size="1280-720"
+					data-src="https://youtu.be/qf6igM-emUM"
+					data-poster="https://img.youtube.com/vi/qf6igM-emUM/maxresdefault.jpg"
+					data-sub-html=""
+				>
+					<figure>
+						<img width="400" height="225" class="img-responsive" src="https://img.youtube.com/vi/qf6igM-emUM/maxresdefault.jpg" />
+						<figcaption>Christmas Online Service - 25th Dec 2020</figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
+		<!-- Silver Lining Section -->
+		<section class="silver-lining-section d-flex justify-content-center align-items-center">
+			<div class="container content-container">
+				<p>
+					“Every cloud has a silver lining” or “There is light at the end of the tunnel”
+					<br /><br />
+					Have you ever wondered whether this is merely a quote from a book or a tale? Have you ever questioned the truth of this? What exactly is
+					<span class="h6 font-weight-bold">Hope</span>? Where can one find it? <br /><br />
+					<span class="h6 font-weight-bold">Hope</span> comes from knowing there is light despite all the darkness. The best kind of hope is that which stays
+					forever. We wish you will discover and experience this unending Hope. <br /><br />
+					Come!
+					<br /><br />
+					Join us as we celebrate the birth of Jesus Christ and experience the <span class="h6 font-weight-bold">Thrill of Hope</span> it brings! <br /><br />
+					Enjoy an evening filled with games, frolics, delicious Christmas treats, festive tunes and much more.
+				</p>
+				<img src="./assets/images/svg-min/silver-lining-min.svg" alt="Silver Lining" class="silver-lining-img" />
+				<!-- <div class="content-title">
 					<p>THE SILVER LINING</p>
 				</div> -->
-		</div>
-	</section>
-	<!-- Joy To The World Section -->
-	<section class="joy-to-the-world-section">
-		<div class="vector">
-			<img class="d-none d-lg-block line" src="./assets/images/svg-min/vector-2-min.svg" />
-			<img class="d-lg-none line" src="./assets/images/svg-min/vector-2-small-min.svg" />
-			<div class="location" data-iframe="true" id="open-google-map"
-				data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.881570371776!2d77.7420795148563!3d12.97942581821833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe0e45636d%3A0x1b6c20f33911c240!2sElim%20Camp%20Center%20Whitefield!5e0!3m2!1sen!2sin!4v1669576569064!5m2!1sen!2sin">
-				<i class="fa fa-map-marker mr-2"></i><u role="button">ELIM Camp Centre, Whitefield</u>
 			</div>
-			<img src="./assets/images/svg-min/santa-sleigh-min.svg" alt="Santa Sleigh" class="santa-sleigh-img" />
-		</div>
-		<div class="section-container">
-			<p class="section-content">
-				<span><em>Joy to the world</em></span>, the Lord has come. <br /><br />
-				<span><em>Come you faithful</em></span>, oh what is Christmas without good old hymns, birth story of
-				Jesus, cookies, gifts, and a good laughter. <br /><br />
-				Join us to experience the beauty of this season and explore how true Hope can bring light into your
-				hearts and to your home.
-				<br /><br />
-				<span class="h6 font-weight-bold">Hop in</span> as we celebrate the brilliance of Jesus birth on...
-			</p>
-			<!-- <p class="section-sub-content"></p> -->
-			<div class="row my-md-5 my-1">
-				<div class="col"><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</div>
-				<div class="w-100 d-lg-none"></div>
-				<div class="col"><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</div>
-			</div>
-		</div>
-		<img src="./assets/images/svg-min/three-wise-men-min.svg" alt="Three wise men" class="three-wise-men-img" />
-		<img src="./assets/images/svg-min/baby-jesus-min.svg" alt="Baby Jesus" class="baby-jesus-img" />
-	</section>
-	<!-- Registration Section -->
-	<section class="registration-section">
-		<div class="container-fluid">
-			<div class="registration-container">
-				<div class="row">
-					<div class="col">
-						<p class="registration-heading">Register &amp; join us<br />this christmas</p>
+		</section>
+		<!-- Joy To The World Section -->
+		<section class="joy-to-the-world-section">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" id="drawSVG">
+				<g fill="none" stroke="white" stroke-width="2" stroke-dasharray="10,10">
+					<path id="arrowRight" />
+				</g>
+			</svg>
+
+			<div class="section-container">
+				<div class="section-content mt-5">
+					<div class="row">
+						<div class="offset-md-4 col-md-4">
+							<p>
+								<span><em>Joy to the world</em></span
+								>, the Lord has come. <br /><br />
+								<span><em>Come you faithful</em></span
+								>, oh what is Christmas without good old hymns, birth story of Jesus, cookies, gifts, and a good laughter. <br /><br />
+								Join us to experience the beauty of this season and explore how true Hope can bring light into your hearts and to your home.
+								<br /><br />
+								<span class="h6 font-weight-bold">Hop in</span> as we celebrate the brilliance of Jesus birth on...
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="row align-items-center">
-					<div class="col-lg-4 offset-lg-4 text-center">
-						<a href="#" class="registration-link"><button class="btn registration-btn">Count me
-								in</button></a>
-						<p class="registration-subheading">Click the button to Register!</p>
+					<div class="row section-row mt-4 my-md-4">
+						<div class="offset-md-4 col-md-2"><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</div>
+						<div class="col-md-2"><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</div>
 					</div>
-					<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
-						<ul class="list-unstyled ml-sm-5">
-							<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
-							<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
-							<li style="position: relative; z-index: 1032" data-iframe="true" id="open-google-map"
-								data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.881570371776!2d77.7420795148563!3d12.97942581821833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe0e45636d%3A0x1b6c20f33911c240!2sElim%20Camp%20Center%20Whitefield!5e0!3m2!1sen!2sin!4v1669576569064!5m2!1sen!2sin">
-								<i class="fa fa-map-marker mr-2"></i><u role="button">ELIM Camp Centre, Whitefield</u>
-							</li>
-						</ul>
+					<div class="row section-row mt-md-3">
+						<div
+							class="offset-md-6 col-md-2"
+							style="position: relative; z-index: 1032"
+							data-iframe="true"
+							id="open-google-map-1"
+							data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.881570371776!2d77.7420795148563!3d12.97942581821833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe0e45636d%3A0x1b6c20f33911c240!2sElim%20Camp%20Center%20Whitefield!5e0!3m2!1sen!2sin!4v1669576569064!5m2!1sen!2sin"
+						>
+							<i class="fa fa-map-marker mr-2"></i><u role="button">ELIM Camp Centre, Whitefield</u>
+						</div>
 					</div>
 				</div>
 			</div>
+			<img src="./assets/images/svg-min/santa-sleigh-min.svg" id="santaSleigh" alt="Santa Sleigh" class="santa-sleigh-img" />
+			<img src="./assets/images/svg-min/three-wise-men-min.svg" alt="Three wise men" class="three-wise-men-img" />
+			<img src="./assets/images/svg-min/baby-jesus-min.svg" alt="Baby Jesus" class="baby-jesus-img" />
+		</section>
+		<!-- Registration Section -->
+		<section class="registration-section">
+			<div class="container-fluid">
+				<div class="registration-container">
+					<div class="row">
+						<div class="col">
+							<p class="registration-heading">Register &amp; join us<br />this christmas</p>
+						</div>
+					</div>
+					<div class="row align-items-center">
+						<div class="col-lg-4 offset-lg-4 text-center">
+							<a href="#" class="registration-link"><button class="btn registration-btn">Count me in</button></a>
+							<p class="registration-subheading">Click the button to Register!</p>
+						</div>
+						<div class="col-lg-4 text-left py-sm-4 schedule-col order-lg-12 order-first">
+							<ul class="list-unstyled ml-sm-5">
+								<li><i class="fa fa-calendar-o mr-2"></i>Saturday, 17th December, 2022</li>
+								<li><i class="fa fa-clock-o mr-2"></i>4:30pm Onwards</li>
+								<li
+									style="position: relative; z-index: 1032"
+									data-iframe="true"
+									id="open-google-map-2"
+									data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.881570371776!2d77.7420795148563!3d12.97942581821833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe0e45636d%3A0x1b6c20f33911c240!2sElim%20Camp%20Center%20Whitefield!5e0!3m2!1sen!2sin!4v1669576569064!5m2!1sen!2sin"
+								>
+									<i class="fa fa-map-marker mr-2"></i><u role="button">ELIM Camp Centre, Whitefield</u>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-			<div class="ground-container">
-				<img src="./assets/images/svg-min/ground-min.svg" alt="Ground" srcset="" class="ground" />
-				<img src="./assets/images/svg-min/santa-min.svg" alt="Santa" srcset="" class="santa" />
+				<div class="ground-container">
+					<img src="./assets/images/svg-min/ground-min.svg" alt="Ground" srcset="" class="ground" />
+					<img src="./assets/images/svg-min/santa-min.svg" alt="Santa" srcset="" class="santa" />
+				</div>
 			</div>
-		</div>
-	</section>
-	<audio id="backgroundMusic" loop="true">
-		<source src="./assets/audio/background_music.mp3" type="audio/mpeg" />
-	</audio>
-	<script src="./assets/js/gsap.min.js"></script>
-	<script src="./assets/js/ScrollMagic.min.js"></script>
-	<script src="./assets/js/animation.gsap.js"></script>
-	<!-- <script src="./assets/js/debug.addIndicators.min.js"></script> -->
-	<script src="./assets/js/jquery.slim.min.js"></script>
-	<script src="./assets/js/bootstrap.bundle.min.js"></script>
-	<script src="https://js.churchcenter.com/modal/v1"></script>
-	<script src="./assets/js/snowfall.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.min.js"
-		integrity="sha512-pG+XpUdyBtp28FzjpaIaj72KYvZ87ZbmB3iytDK5+WFVyun8r5LJ2x1/Jy/KHdtzUXA0CUVhEnG+Isy1jVJAbA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/thumbnail/lg-thumbnail.min.js"
-		integrity="sha512-cs5vRstvdBhVt5xFxjYtmbb3BF0fgVYwbBNsfAxFLGuRiRm/4PoKJvAt55KJtT8AvWOxDL4Xt/AVSE48geDjHQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/zoom/lg-zoom.min.js"
-		integrity="sha512-Lr6V5jv24JHC1+HU2k4n38smhlr2bBx2pdyM/GrYo/pnpzQ/Th2/LnCxyEesD8+jDnPlK1c6dKiI0uNnOSlyTg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/video/lg-video.min.js"
-		integrity="sha512-QhxghrJdGZrlFzBFJrxy1FLebkJiGI7uzYyYwYnNJqzlxKbkHRQmO+47NWYKqVnd3WwGFxxcKpPehWcCwfKV4w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- Change the js back to ./src/index.js during development -->
-	<!-- <script src="./src/index.js"></script> -->
-	<!-- For production -->
-	<script src="./assets/js/thrill-of-hope.min.js"></script>
-</body>
-
+		</section>
+		<audio id="backgroundMusic" loop="true">
+			<source src="./assets/audio/background_music.mp3" type="audio/mpeg" />
+		</audio>
+		<script src="./assets/js/gsap.min.js"></script>
+		<script src="./assets/js/ScrollMagic.min.js"></script>
+		<script src="./assets/js/animation.gsap.js"></script>
+		<!-- <script src="./assets/js/debug.addIndicators.min.js"></script> -->
+		<script src="./assets/js/jquery.slim.min.js"></script>
+		<script src="./assets/js/bootstrap.bundle.min.js"></script>
+		<script src="https://js.churchcenter.com/modal/v1"></script>
+		<script src="./assets/js/snowfall.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.min.js"
+			integrity="sha512-pG+XpUdyBtp28FzjpaIaj72KYvZ87ZbmB3iytDK5+WFVyun8r5LJ2x1/Jy/KHdtzUXA0CUVhEnG+Isy1jVJAbA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/thumbnail/lg-thumbnail.min.js"
+			integrity="sha512-cs5vRstvdBhVt5xFxjYtmbb3BF0fgVYwbBNsfAxFLGuRiRm/4PoKJvAt55KJtT8AvWOxDL4Xt/AVSE48geDjHQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/zoom/lg-zoom.min.js"
+			integrity="sha512-Lr6V5jv24JHC1+HU2k4n38smhlr2bBx2pdyM/GrYo/pnpzQ/Th2/LnCxyEesD8+jDnPlK1c6dKiI0uNnOSlyTg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/video/lg-video.min.js"
+			integrity="sha512-QhxghrJdGZrlFzBFJrxy1FLebkJiGI7uzYyYwYnNJqzlxKbkHRQmO+47NWYKqVnd3WwGFxxcKpPehWcCwfKV4w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- Change the js back to ./src/index.js during development -->
+		<!-- <script src="./src/index.js"></script> -->
+		<!-- For production -->
+		<script src="./assets/js/thrill-of-hope.min.js"></script>
+	</body>
 </html>
