@@ -88,7 +88,7 @@ $(document).ready(() => {
 	// Theme section scene
 	new ScrollMagic.Scene({
 		triggerElement: ".theme-section",
-		duration: "50%",
+		duration: "150%",
 	})
 		.setClassToggle(".theme-section img", "visible") // add class to reveal
 		.setPin(".theme-section")
@@ -109,7 +109,10 @@ $(document).ready(() => {
 		// ... other settings
 	});
 
-	lightGallery(document.getElementById("open-google-map"), {
+	lightGallery(document.getElementById("open-google-map-1"), {
+		selector: "this",
+	});
+	lightGallery(document.getElementById("open-google-map-2"), {
 		selector: "this",
 	});
 
@@ -117,4 +120,48 @@ $(document).ready(() => {
 		$("#backgroundMusic").prop("muted", !$("#backgroundMusic").prop("muted"));
 		$(".background-music-btn").toggleClass("no");
 	};
+
+	var santaSleigh = document.querySelector("#santaSleigh");
+	var openGoogleMap = document.querySelector("#open-google-map-1");
+	// var arrowLeft = document.querySelector("#arrowLeft");
+	var arrowRight = document.querySelector("#arrowRight");
+
+	var drawConnector = function () {
+		var santaSleighLeft = {
+			x: santaSleigh.offsetLeft - 8,
+			y: santaSleigh.offsetTop + santaSleigh.offsetHeight / 2,
+		};
+		var santaSleighRight = {
+			x: santaSleigh.offsetLeft + santaSleigh.offsetWidth + 8,
+			y: santaSleigh.offsetTop + santaSleigh.offsetHeight / 2,
+		};
+		var locationLeft = {
+			x: openGoogleMap.getBoundingClientRect().left - 8,
+			y: openGoogleMap.parentNode.offsetTop + openGoogleMap.offsetHeight / 2,
+		};
+		var locationRight = {
+			x: openGoogleMap.offsetLeft + openGoogleMap.offsetWidth + 8,
+			y: openGoogleMap.offsetTop + openGoogleMap.offsetHeight / 2,
+		};
+
+		var dStrRight;
+		if (window.innerWidth > 480) {
+			dStrRight = `M ${santaSleighLeft.x}, ${santaSleighLeft.y} C ${santaSleighLeft.x - locationLeft.x}, ${santaSleighLeft.y} ${
+				locationLeft.x - santaSleighLeft.x
+			}, ${locationLeft.y} ${locationLeft.x},${locationLeft.y}`;
+		} else {
+			dStrRight = `M ${santaSleighLeft.x}, ${santaSleighLeft.y - santaSleighLeft.y - santaSleighLeft.y} C ${santaSleighLeft.x + locationLeft.x} ${
+				santaSleighLeft.y - santaSleighLeft.y - santaSleighLeft.y
+			}, ${santaSleighLeft.x - 100} 0, 20 ${santaSleighLeft.y - santaSleighLeft.y - santaSleighLeft.y} C 0 20, 0 20, 20 ${locationLeft.y + 20} C 20 ${
+				locationLeft.y + 20
+			}, 25 ${locationLeft.y + 60}, ${locationLeft.x + 40} ${locationLeft.y + 50}`;
+		}
+
+		console.log(dStrRight);
+		// M 236, -8 C 230.88333129882812, -8 -230.88333129882812, 525.5 5.116668701171875,525.5
+		// M 250, 8 C 250 8, 150 0, 20 8 C 0 20, 0 20, 20 570 C 30 580, 50 580, 60 570
+		arrowRight.setAttribute("d", dStrRight);
+	};
+
+	setTimeout(drawConnector, 250);
 });

@@ -64,8 +64,6 @@ body {
 		font-family: "CHRISTMAS DAY";
 		border-radius: 20px;
 		font-size: 2rem;
-		// background: #ed5451;
-		// color: #ffffff;
 		padding: 5px 30px;
 		margin-top: 20px;
 		animation: blink 1s steps(1) infinite;
@@ -236,6 +234,7 @@ section.opening-section {
 	@media (max-width: 768px) {
 		.background-img-wrapper {
 			background-image: url("../images/opening-bg-small.png");
+			background-attachment: scroll;
 		}
 
 		.opening-visual {
@@ -253,10 +252,6 @@ section.opening-section {
 
 /* Theme Section */
 section.theme-section {
-	// background: url("../images/svg/theme.svg");
-	// background-position: center;
-	// background-repeat: no-repeat;
-
 	img.theme-img {
 		position: absolute;
 		top: 0;
@@ -407,7 +402,7 @@ section.silver-lining-section {
 
 		p {
 			margin-bottom: 0;
-			font-size: 0.8rem;
+			// font-size: 0.8rem;
 		}
 
 		img.silver-lining-img {
@@ -479,30 +474,32 @@ section.silver-lining-section {
 section.joy-to-the-world-section {
 	position: relative;
 
-	.section-container {
+	svg#drawSVG {
 		position: absolute;
-		top: 15%;
-		right: 15%;
-		width: 40%;
+	}
 
-		p.section-content {
-			background: #37376c;
-			display: inline-block;
-			padding: 3rem;
-			border-radius: 40px;
-			text-align: center;
-			line-height: 30px;
-			margin: 0;
-			font-size: 0.8rem;
+	.section-container {
+		position: relative;
+		.section-content {
+			p {
+				background: #37376c;
+				display: inline-block;
+				padding: 3rem;
+				border-radius: 40px;
+				text-align: center;
+				line-height: 30px;
+				margin: 0;
+				// font-size: 0.8rem;
+			}
 		}
 	}
 
 	img.santa-sleigh-img {
 		position: absolute;
-		top: 10%;
-		left: 5%;
+		top: 20px;
+		right: 5%;
 		max-width: 25%;
-		transform: rotateY(180deg) rotateZ(20deg);
+		transform: rotateZ(20deg);
 	}
 
 	img.three-wise-men-img {
@@ -518,6 +515,9 @@ section.joy-to-the-world-section {
 	}
 
 	@media (max-width: 576px) {
+		svg#drawSVG {
+			top: -40px;
+		}
 		.section-container {
 			width: 85%;
 			top: 25%;
@@ -525,14 +525,21 @@ section.joy-to-the-world-section {
 			left: 0;
 			margin: 0 auto;
 
-			p.section-content {
-				padding: 2rem 1rem;
-				line-height: 25px;
+			.section-content {
+				p {
+					padding: 2rem 1rem;
+					line-height: 25px;
+				}
+
+				.section-row {
+					text-align: center;
+					line-height: 35px;
+				}
 			}
 		}
 
 		img.santa-sleigh-img {
-			top: 20%;
+			top: -40px;
 			max-width: 30%;
 		}
 
@@ -717,6 +724,28 @@ section.registration-section {
 
 	to {
 		bottom: 1%;
+	}
+}
+
+:root {
+	--santa-top-pos: -18%;
+	--santa-bottom-pos: -20%;
+}
+
+@media (max-width: 991px) {
+	:root {
+		--santa-top-pos: -3%;
+		--santa-bottom-pos: -5%;
+	}
+}
+
+@keyframes santa-fly-2 {
+	from {
+		top: var(--santa-top-pos);
+	}
+
+	to {
+		top: var(--santa-bottom-pos);
 	}
 }
 
