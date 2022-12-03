@@ -83,7 +83,21 @@ $(document).ready(() => {
 		if ($(document).scrollTop() === 0 && !$(".background-snow-btn").hasClass("no")) {
 			snowfall.setDensity(100);
 		}
+
+		if (isScrolledIntoView(santaSleigh)) {
+			drawConnector();
+		}
 	});
+
+	function isScrolledIntoView(elem) {
+		var docViewTop = $(window).scrollTop();
+		var docViewBottom = docViewTop + $(window).height();
+
+		var elemTop = $(elem).offset().top;
+		var elemBottom = elemTop + $(elem).height();
+
+		return elemBottom <= docViewBottom && elemTop >= docViewTop;
+	}
 
 	// Theme section scene
 	new ScrollMagic.Scene({
@@ -123,7 +137,6 @@ $(document).ready(() => {
 
 	var santaSleigh = document.querySelector("#santaSleigh");
 	var openGoogleMap = document.querySelector("#open-google-map-1");
-	// var arrowLeft = document.querySelector("#arrowLeft");
 	var arrowRight = document.querySelector("#arrowRight");
 
 	var drawConnector = function () {
@@ -131,17 +144,9 @@ $(document).ready(() => {
 			x: santaSleigh.offsetLeft - 8,
 			y: santaSleigh.offsetTop + santaSleigh.offsetHeight / 2,
 		};
-		var santaSleighRight = {
-			x: santaSleigh.offsetLeft + santaSleigh.offsetWidth + 8,
-			y: santaSleigh.offsetTop + santaSleigh.offsetHeight / 2,
-		};
 		var locationLeft = {
 			x: openGoogleMap.getBoundingClientRect().left - 8,
 			y: openGoogleMap.parentNode.offsetTop + openGoogleMap.offsetHeight / 2,
-		};
-		var locationRight = {
-			x: openGoogleMap.offsetLeft + openGoogleMap.offsetWidth + 8,
-			y: openGoogleMap.offsetTop + openGoogleMap.offsetHeight / 2,
 		};
 
 		var dStrRight;
@@ -157,11 +162,6 @@ $(document).ready(() => {
 			}, 25 ${locationLeft.y + 60}, ${locationLeft.x + 40} ${locationLeft.y + 50}`;
 		}
 
-		console.log(dStrRight);
-		// M 236, -8 C 230.88333129882812, -8 -230.88333129882812, 525.5 5.116668701171875,525.5
-		// M 250, 8 C 250 8, 150 0, 20 8 C 0 20, 0 20, 20 570 C 30 580, 50 580, 60 570
 		arrowRight.setAttribute("d", dStrRight);
 	};
-
-	setTimeout(drawConnector, 250);
 });
